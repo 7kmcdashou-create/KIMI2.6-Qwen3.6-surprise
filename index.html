@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
+  <meta name="theme-color" content="#05060a">
+  <meta name="description" content="KIMI K2.6 と Qwen3.6-Max-Preview の同時リリースが示した、AI産業の潮目。2026年4月20日に何が起きたのか。ひとつの長い所感と、中国AIの今後に関する9つの予測。">
+  <meta property="og:title" content="KIMI K2.6 と Qwen3.6 の衝撃">
+  <meta property="og:description" content="2026年4月20日、北京と杭州から放たれた2つのモデルが、AI産業の地図そのものを書き換えた。">
+  <title>KIMI K2.6 と Qwen3.6 の衝撃 — ひとつの所感</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700;900&family=Noto+Serif+JP:wght@400;500;700;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- Splash -->
+<div class="splash" aria-hidden="true">
+  <div class="splash-mark">K2.6 × Q3.6</div>
+</div>
+
+<div class="app">
+
+  <!-- App bar -->
+  <header class="appbar">
+    <div class="appbar-title">
+      <div class="appbar-logo">K×Q</div>
+      <div class="appbar-text">
+        <div class="t1">2026.04.20 — Issue No.01</div>
+        <div class="t2">KIMI K2.6 と Qwen3.6 の衝撃</div>
+      </div>
+    </div>
+    <button class="appbar-action" data-share aria-label="共有">
+      <i class="fa-solid fa-arrow-up-from-bracket"></i>
+    </button>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-content">
+      <div class="hero-eyebrow">
+        <span class="dot"></span>
+        <span>LIVE FROM 2026.04.20</span>
+      </div>
+      <h1 class="hero-title">
+        同じ日に、<br>
+        <span class="accent-1">北京と杭州</span>から、<br>
+        最強のモデルが<br>
+        <span class="accent-2">世に放たれた。</span>
+      </h1>
+      <p class="hero-subtitle">
+        KIMI K2.6 と Qwen3.6-Max-Preview。<br>
+        偶然だった。けれど、偶然がこの形で成立すること自体が、今のAI産業の状態を正確に写していた。
+      </p>
+      <div class="hero-meta">
+        <span class="hero-meta-item"><i class="fa-regular fa-calendar"></i>2026年4月20日</span>
+        <span class="hero-meta-item"><i class="fa-regular fa-clock"></i>15分で読める</span>
+        <span class="hero-meta-item"><i class="fa-solid fa-signal"></i>長文読み物</span>
+      </div>
+      <div class="hero-cta">
+        <a class="btn btn-primary" href="part1.html">
+          本文を読む <i class="fa-solid fa-arrow-right"></i>
+        </a>
+        <a class="btn btn-ghost" href="#toc">
+          目次へ <i class="fa-solid fa-list"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 数字セクション -->
+  <section class="section reveal">
+    <div class="section-head">
+      <div class="section-eyebrow">
+        <span class="line"></span><span>AT A GLANCE</span>
+      </div>
+      <h2 class="section-title">ひと目でわかる、<br>4月20日の衝撃。</h2>
+      <p class="section-lead">
+        数字の並びそのものより、「数字が横並びになっている」という事実の方が衝撃だった。序列が崩れた瞬間の、いくつかの尺度。
+      </p>
+    </div>
+
+    <div class="stat-grid">
+      <div class="stat-card">
+        <div class="stat-label">K2.6 自律実行</div>
+        <div class="stat-value"><span data-count="12">0</span><span class="unit">時間</span></div>
+        <div class="stat-sub">一晩中壊れずに働き続ける</div>
+      </div>
+      <div class="stat-card v-purple">
+        <div class="stat-label">並列サブエージェント</div>
+        <div class="stat-value"><span data-count="300">0</span><span class="unit">並列</span></div>
+        <div class="stat-sub">考える深さより長さ</div>
+      </div>
+      <div class="stat-card v-blue">
+        <div class="stat-label">ツール呼び出し</div>
+        <div class="stat-value"><span data-count="4000">0</span><span class="unit">+回</span></div>
+        <div class="stat-sub">1タスクあたり</div>
+      </div>
+      <div class="stat-card v-warm">
+        <div class="stat-label">米中性能差</div>
+        <div class="stat-value"><span data-count="2.7">0</span><span class="unit">%</span></div>
+        <div class="stat-sub">Arena 39ポイント差</div>
+      </div>
+    </div>
+
+    <div class="pullquote reveal">
+      「追いつく」という動詞が、ここで初めて「追い抜く」に書き換えられた。少なくとも特定のワークロードに関しては。
+      <cite>— 序列が静かに崩れた瞬間</cite>
+    </div>
+  </section>
+
+  <!-- 目次/本文誘導 -->
+  <section class="section reveal" id="toc">
+    <div class="section-head">
+      <div class="section-eyebrow">
+        <span class="line"></span><span>TABLE OF CONTENTS</span>
+      </div>
+      <h2 class="section-title">読み物として、<br>立てつけ直した。</h2>
+      <p class="section-lead">
+        一気に読んでもいいし、興味のある地点から降りてもいい。全8章+付録。
+      </p>
+    </div>
+
+    <a class="feature reveal" href="part1.html">
+      <div class="feature-icon ic-1"><i class="fa-solid fa-bolt"></i></div>
+      <div class="feature-body">
+        <div class="feature-title">第1章 同時リリースの所感</div>
+        <div class="feature-desc">IQの競争から、アスリートの競争へ。</div>
+      </div>
+      <div class="feature-arrow"><i class="fa-solid fa-chevron-right"></i></div>
+    </a>
+
+    <a class="feature reveal" href="part2.html">
+      <div class="feature-icon ic-3"><i class="fa-solid fa-map"></i></div>
+      <div class="feature-body">
+        <div class="feature-title">第2章 中国AIの今後</div>
+        <div class="feature-desc">追いつくかではなく、どこで追い抜くか。</div>
+      </div>
+      <div class="feature-arrow"><i class="fa-solid fa-chevron-right"></i></div>
+    </a>
+
+    <a class="feature reveal" href="predictions.html">
+      <div class="feature-icon ic-2"><i class="fa-solid fa-crystal-ball"></i></div>
+      <div class="feature-body">
+        <div class="feature-title">9つの予測 2026-2027</div>
+        <div class="feature-desc">DeepSeek V4、電力、具現化AI、Global South。</div>
+      </div>
+      <div class="feature-arrow"><i class="fa-solid fa-chevron-right"></i></div>
+    </a>
+
+    <a class="feature reveal" href="scenarios.html">
+      <div class="feature-icon ic-4"><i class="fa-solid fa-code-branch"></i></div>
+      <div class="feature-body">
+        <div class="feature-title">3つの未来シナリオ</div>
+        <div class="feature-desc">ブレイクスルー / 並走停滞 / 分断加速。</div>
+      </div>
+      <div class="feature-arrow"><i class="fa-solid fa-chevron-right"></i></div>
+    </a>
+
+    <a class="feature reveal" href="data.html">
+      <div class="feature-icon ic-5"><i class="fa-solid fa-chart-column"></i></div>
+      <div class="feature-body">
+        <div class="feature-title">数字で見るAI 2026</div>
+        <div class="feature-desc">投資、論文、特許、電力、研究者の流れ。</div>
+      </div>
+      <div class="feature-arrow"><i class="fa-solid fa-chevron-right"></i></div>
+    </a>
+
+    <a class="feature reveal" href="timeline.html">
+      <div class="feature-icon ic-6"><i class="fa-regular fa-clock"></i></div>
+      <div class="feature-body">
+        <div class="feature-title">タイムライン 2024→2027</div>
+        <div class="feature-desc">加速のリズムを、年表で追う。</div>
+      </div>
+      <div class="feature-arrow"><i class="fa-solid fa-chevron-right"></i></div>
+    </a>
+
+    <a class="feature reveal" href="models.html">
+      <div class="feature-icon ic-7"><i class="fa-solid fa-microchip"></i></div>
+      <div class="feature-body">
+        <div class="feature-title">モデル & ハードウェア</div>
+        <div class="feature-desc">K2.6 / Qwen3.6 / DeepSeek V4 / Ascend。</div>
+      </div>
+      <div class="feature-arrow"><i class="fa-solid fa-chevron-right"></i></div>
+    </a>
+
+    <a class="feature reveal" href="glossary.html">
+      <div class="feature-icon ic-8"><i class="fa-solid fa-book"></i></div>
+      <div class="feature-body">
+        <div class="feature-title">用語集</div>
+        <div class="feature-desc">Ascend、SWE-Bench、Muse Spark...</div>
+      </div>
+      <div class="feature-arrow"><i class="fa-solid fa-chevron-right"></i></div>
+    </a>
+  </section>
+
+  <!-- ハイライト引用 -->
+  <section class="section reveal">
+    <div class="section-head">
+      <div class="section-eyebrow">
+        <span class="line"></span><span>KEY QUOTES</span>
+      </div>
+      <h2 class="section-title">この記事が、<br>まず伝えたいこと。</h2>
+    </div>
+
+    <div class="card glass reveal">
+      <div class="card-title">
+        <i class="fa-solid fa-quote-left" style="color:var(--accent-red-soft); margin-right:8px;"></i>
+        地図の「種類」が変わった
+      </div>
+      <p class="card-text">
+        塗り替えられたのは勢力図そのものではなく、地図の種類だ。2024年までの「フロンティアAIの単一ランキング」という一枚絵は崩れ、用途別に複数の地図が並立する状態に変わった。
+      </p>
+    </div>
+
+    <div class="card glass reveal">
+      <div class="card-title">
+        <i class="fa-solid fa-quote-left" style="color:var(--accent-purple); margin-right:8px;"></i>
+        IQから、持久力へ
+      </div>
+      <p class="card-text">
+        これまでAIモデルの性能とは「1回の応答の質」で測られてきた。それが突然、「一晩中壊れずに働き続けられるか」という問いに置き換わろうとしている。短距離走者の競技場に、ウルトラマラソンのトラックが敷かれた。
+      </p>
+    </div>
+
+    <div class="card glass reveal">
+      <div class="card-title">
+        <i class="fa-solid fa-quote-left" style="color:var(--accent-blue); margin-right:8px;"></i>
+        18ヶ月、その間に。
+      </div>
+      <p class="card-text">
+        2027年までの18ヶ月、その間に、私たちが何を見るかで、たぶん数十年分の未来が決まる。
+      </p>
+    </div>
+  </section>
+
+  <!-- コントラストの数字 -->
+  <section class="section reveal">
+    <div class="section-head">
+      <div class="section-eyebrow">
+        <span class="line"></span><span>US vs. CHINA</span>
+      </div>
+      <h2 class="section-title">投資額23倍、<br>それでも性能差2.7%。</h2>
+      <p class="section-lead">
+        金額では米国が圧倒する。なのに、最上位モデル同士はほぼ並んだ。3年前のGPT-4時代なら考えられなかった。
+      </p>
+    </div>
+
+    <div class="compare reveal">
+      <div class="compare-title">民間AI投資(2024)</div>
+      <div class="compare-row">
+        <span class="compare-label">🇺🇸 米国</span>
+        <div class="compare-bar"><div class="compare-bar-fill us" data-width="100%"></div></div>
+        <span class="compare-val">$2,859B*</span>
+      </div>
+      <div class="compare-row">
+        <span class="compare-label">🇨🇳 中国</span>
+        <div class="compare-bar"><div class="compare-bar-fill cn" data-width="4.3%"></div></div>
+        <span class="compare-val">$124B</span>
+      </div>
+      <div style="font-size:10.5px; color:var(--text-3); margin-top:8px; line-height:1.5;">
+        *原資料: 米 $2,859B は累積ベース。単年比でも約23倍の開き。
+      </div>
+    </div>
+
+    <div class="compare reveal">
+      <div class="compare-title">AI論文シェア(2024)</div>
+      <div class="compare-row">
+        <span class="compare-label">🇺🇸 米国</span>
+        <div class="compare-bar"><div class="compare-bar-fill us" data-width="42.7%"></div></div>
+        <span class="compare-val">7.6%</span>
+      </div>
+      <div class="compare-row">
+        <span class="compare-label">🇨🇳 中国</span>
+        <div class="compare-bar"><div class="compare-bar-fill cn" data-width="100%"></div></div>
+        <span class="compare-val">17.8%</span>
+      </div>
+    </div>
+
+    <div class="compare reveal">
+      <div class="compare-title">AI特許(世界シェア)</div>
+      <div class="compare-row">
+        <span class="compare-label">🇺🇸 米国</span>
+        <div class="compare-bar"><div class="compare-bar-fill us" data-width="20%"></div></div>
+        <span class="compare-val">— </span>
+      </div>
+      <div class="compare-row">
+        <span class="compare-label">🇨🇳 中国</span>
+        <div class="compare-bar"><div class="compare-bar-fill cn" data-width="100%"></div></div>
+        <span class="compare-val">70%+</span>
+      </div>
+    </div>
+
+    <div class="pullquote reveal" style="margin-top:26px;">
+      3年前、GPT-4が中国最上位モデルに300ポイント以上の大差をつけていた状況を知っている人間からすると、この収斂速度は直感に反する速さだ。
+      <cite>— Stanford AI Index 2026 を読みながら</cite>
+    </div>
+  </section>
+
+  <!-- CTA 本文へ -->
+  <section class="section reveal">
+    <div class="card glass" style="text-align:center; padding: 30px 22px;">
+      <div style="font-family: var(--font-serif); font-size: 14px; color: var(--text-2); letter-spacing: 0.2em; margin-bottom:8px;">ESSAY</div>
+      <h3 style="font-family: var(--font-serif); font-size: 24px; line-height: 1.4; margin-bottom:14px;">
+        では、本文から<br>読みはじめよう。
+      </h3>
+      <p style="font-size:13.5px; color: var(--text-2); margin-bottom:20px;">
+        数字でも、図でもなく、まずは言葉で。<br>2026年4月20日、何が起きたのかを書き留めた。
+      </p>
+      <a class="btn btn-primary" href="part1.html">
+        第1章を読む <i class="fa-solid fa-arrow-right"></i>
+      </a>
+    </div>
+  </section>
+
+  <!-- フッター -->
+  <footer class="footer">
+    <div class="footer-logo">KIMI K2.6 × Qwen 3.6</div>
+    <div>ひとつの所感、ひとつの長い考察、そして9つの予測。</div>
+    <div style="margin-top:10px;">© 2026 Essay / Digital Edition</div>
+  </footer>
+
+</div>
+
+<!-- Bottom nav -->
+<nav class="bottom-nav">
+  <a class="bottom-nav-item" href="index.html" data-page="index.html">
+    <i class="fa-solid fa-house"></i><span>ホーム</span>
+  </a>
+  <a class="bottom-nav-item" href="part1.html" data-page="part1.html">
+    <i class="fa-solid fa-newspaper"></i><span>本文</span>
+  </a>
+  <a class="bottom-nav-item" href="predictions.html" data-page="predictions.html">
+    <i class="fa-solid fa-crystal-ball"></i><span>予測</span>
+  </a>
+  <a class="bottom-nav-item" href="data.html" data-page="data.html">
+    <i class="fa-solid fa-chart-column"></i><span>数字</span>
+  </a>
+  <a class="bottom-nav-item" href="timeline.html" data-page="timeline.html">
+    <i class="fa-regular fa-clock"></i><span>年表</span>
+  </a>
+</nav>
+
+<script src="js/main.js"></script>
+</body>
+</html>

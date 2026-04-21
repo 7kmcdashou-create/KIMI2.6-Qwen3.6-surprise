@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#05060a">
+  <meta name="description" content="第2章: 中国AIの今後 ― ひとつの長い考察。追いつくかではなく、どこで追い抜き、どこで止まり、どこで別の道を行くか。">
+  <title>第2章 中国AIの今後 — KIMI K2.6 と Qwen3.6 の衝撃</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700;900&family=Noto+Serif+JP:wght@400;500;700;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="app">
+
+  <header class="appbar">
+    <div class="appbar-title">
+      <a href="index.html" class="appbar-logo" style="text-decoration:none;">K×Q</a>
+      <div class="appbar-text">
+        <div class="t1">CHAPTER 02 / ESSAY</div>
+        <div class="t2">中国AIの今後</div>
+      </div>
+    </div>
+    <button class="appbar-action" data-share aria-label="共有">
+      <i class="fa-solid fa-arrow-up-from-bracket"></i>
+    </button>
+  </header>
+
+  <!-- 記事ヘッダ -->
+  <header class="article-header">
+    <div class="article-number">CHAPTER 02 · ESSAY</div>
+    <h1 class="article-title">
+      中国AIの<br>
+      <span style="background: var(--gradient-3); -webkit-background-clip: text; background-clip:text; -webkit-text-fill-color: transparent;">今後</span><br>
+      — ひとつの長い考察
+    </h1>
+    <div class="article-meta">
+      <span class="article-meta-item"><i class="fa-regular fa-calendar"></i>2026.04</span>
+      <span class="article-meta-item"><i class="fa-regular fa-clock"></i>約12分</span>
+      <span class="article-meta-item"><i class="fa-solid fa-chart-line"></i>地政学・技術</span>
+    </div>
+  </header>
+
+  <!-- 本文 -->
+  <main class="section" style="padding-top: 10px;">
+    <div class="article-body reveal">
+
+      <p>
+        中国のAIがこれからどこへ行くのか、という問いは、2026年4月現在、もはや「追いつくか」ではなく <strong>「どこで追い抜き、どこで止まり、どこで別の道を行くか」</strong> という三つの問いに分岐しつつある。この分岐点に立って未来を見通そうとすると、景色は意外に複雑だ。技術、ハードウェア、人材、地政学、商業戦略 — これらが互いに打ち消し合ったり増幅し合ったりしていて、単純な一直線の未来予測を許してくれない。
+      </p>
+
+      <p>
+        以下は、私がこの一週間の報道と Stanford AI Index 2026 の数字を読み込みながら、頭の中で少しずつ組み立てていった見取り図である。結論から言うと、<span class="highlight-blue">私は「中国が総合一位になる」とは思っていない。</span>しかし <span class="highlight-purple">「中国が多くの重要ドメインで分断された世界の半分を主導する」</span>ことは、もうほぼ確定事項に近い段階に来ていると見ている。
+      </p>
+
+      <!-- 3つの問いカード -->
+      <div class="card glass" style="margin: 28px 0;">
+        <div class="card-title"><i class="fa-solid fa-code-branch" style="color: var(--accent-red-soft); margin-right:6px;"></i>分岐した三つの問い</div>
+        <div style="margin-top:14px;">
+          <div style="padding: 10px 12px; border-radius: 10px; background: rgba(255,59,74,0.08); border-left: 3px solid var(--accent-red); margin-bottom: 8px;">
+            <div style="font-size:11px; color: var(--accent-red-soft); font-weight:700; letter-spacing:0.1em; margin-bottom:3px;">Q1</div>
+            <div style="font-size:13.5px; color: var(--text-0);">どこで追い抜くか?</div>
+          </div>
+          <div style="padding: 10px 12px; border-radius: 10px; background: rgba(255,182,72,0.08); border-left: 3px solid var(--accent-amber); margin-bottom: 8px;">
+            <div style="font-size:11px; color: var(--accent-amber); font-weight:700; letter-spacing:0.1em; margin-bottom:3px;">Q2</div>
+            <div style="font-size:13.5px; color: var(--text-0);">どこで止まるか?</div>
+          </div>
+          <div style="padding: 10px 12px; border-radius: 10px; background: rgba(91,140,255,0.08); border-left: 3px solid var(--accent-blue);">
+            <div style="font-size:11px; color: var(--accent-blue); font-weight:700; letter-spacing:0.1em; margin-bottom:3px;">Q3</div>
+            <div style="font-size:13.5px; color: var(--text-0);">どこで別の道を行くか?</div>
+          </div>
+        </div>
+      </div>
+
+      <h2>まず、数字がどこまで来ているか</h2>
+
+      <p>
+        この議論をする前提として、2026年春時点の客観データを押さえておきたい。<strong>Stanford AI Index 2026</strong>によれば、米国の民間AI投資は<span style="font-family: var(--font-mono); color: var(--accent-blue);">2,859億ドル</span>、中国は<span style="font-family: var(--font-mono); color: var(--accent-red-soft);">124億ドル</span> — <strong>約23倍の開き</strong>がある。にもかかわらず最上位モデル同士の性能差は <strong>わずか2.7%(Arena指標で39ポイント差)</strong> にまで縮まった。3年前、GPT-4が中国最上位モデルに300ポイント以上の大差をつけていた状況を知っている人間からすると、<span class="highlight-purple">この収斂速度は直感に反する速さ</span>だ。
+      </p>
+
+      <!-- 数字の要約 -->
+      <div class="stat-grid">
+        <div class="stat-card">
+          <div class="stat-label">米国民間AI投資</div>
+          <div class="stat-value">$2,859<span class="unit">B</span></div>
+          <div class="stat-sub">中国の約23倍</div>
+        </div>
+        <div class="stat-card v-warm">
+          <div class="stat-label">中国民間AI投資</div>
+          <div class="stat-value">$124<span class="unit">B</span></div>
+          <div class="stat-sub">「足りない」のに追いついた</div>
+        </div>
+        <div class="stat-card v-purple">
+          <div class="stat-label">Arena 性能差</div>
+          <div class="stat-value">2.7<span class="unit">%</span></div>
+          <div class="stat-sub">39pt差 / 3年前は300pt</div>
+        </div>
+        <div class="stat-card v-blue">
+          <div class="stat-label">AI論文(中)</div>
+          <div class="stat-value">17.8<span class="unit">%</span></div>
+          <div class="stat-sub">米は7.6%</div>
+        </div>
+      </div>
+
+      <p>
+        研究生産性の逆転も並行して起きている。2024年のAI論文の <strong>17.8%が中国発、米国は7.6%</strong>。引用シェアでも中国20.6%、米国12.6%と中国がリード。特許に至っては <strong>中国が世界の70%以上</strong>を占める。量で測るならすでに中国は米国を超えており、質(引用数)でも差を付けられる段階に入っている。
+      </p>
+
+      <!-- 3つのデータの横並び -->
+      <div class="compare">
+        <div class="compare-title">AI論文シェア 2024</div>
+        <div class="compare-row">
+          <span class="compare-label">米国</span>
+          <div class="compare-bar"><div class="compare-bar-fill us" data-width="42.7%"></div></div>
+          <span class="compare-val">7.6%</span>
+        </div>
+        <div class="compare-row">
+          <span class="compare-label">中国</span>
+          <div class="compare-bar"><div class="compare-bar-fill cn" data-width="100%"></div></div>
+          <span class="compare-val">17.8%</span>
+        </div>
+      </div>
+
+      <div class="compare">
+        <div class="compare-title">引用シェア 2024</div>
+        <div class="compare-row">
+          <span class="compare-label">米国</span>
+          <div class="compare-bar"><div class="compare-bar-fill us" data-width="61%"></div></div>
+          <span class="compare-val">12.6%</span>
+        </div>
+        <div class="compare-row">
+          <span class="compare-label">中国</span>
+          <div class="compare-bar"><div class="compare-bar-fill cn" data-width="100%"></div></div>
+          <span class="compare-val">20.6%</span>
+        </div>
+      </div>
+
+      <p>
+        そして地味にいちばん重い数字は、<strong>人の流れ</strong>だ。<span class="highlight-blue">米国へのAI研究者流入が2017年以降89%減少、その8割はこの1年で起きた。</span>これは取り返しがつきにくい変化で、理由は単純に「研究者は人間で、人生は一度しかない」からだ。一度別の場所で研究キャリアを築き始めた人間は、10年後にある政権が態度を変えても戻ってこない。2026年に米国で「やっぱりビザを緩和します」と言ったところで、2020年代前半に米国行きを諦めて北京や杭州で博士号を取り、そのまま DeepSeek や Moonshot に就職した若い研究者たちは、すでに中国側の人的資本の一部になっている。
+      </p>
+
+      <!-- 研究者流入減少 -->
+      <div class="card glass" style="margin: 24px 0; padding: 22px;">
+        <div style="font-family: var(--font-serif); font-size: 54px; font-weight: 900; line-height: 1; background: var(--gradient-1); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; letter-spacing: -0.03em;">
+          −89<span style="font-size: 36px;">%</span>
+        </div>
+        <div style="font-size: 13px; color: var(--text-2); letter-spacing: 0.1em; text-transform: uppercase; font-weight: 600; margin-top: 6px;">
+          US-Bound AI Researcher Inflow
+        </div>
+        <div style="font-size: 13px; color: var(--text-1); margin-top: 8px; line-height: 1.7;">
+          2017年以降の米国へのAI研究者流入減少率。うち8割がこの1年で起きた。<strong>取り返しがつきにくい類の変化。</strong>
+        </div>
+      </div>
+
+      <p>
+        この三つ — <strong>性能差2.7%、研究生産量トップ、人材流入89%減</strong> — が並んで動いている状況は、単発のニュースとしてではなく、<span class="highlight-purple">構造転換として読むべき</span>だと思う。
+      </p>
+
+      <h2>ハードウェアという、まだ埋まらない穴</h2>
+
+      <p>
+        ただし、いちばん中国にとって厳しい領域がハードウェアであることは、どう楽観的に読んでも変わらない。Huaweiの主力AIチップ<strong>Ascend 910C</strong>は、Nvidia H100と比べてダイ面積が約60%大きく、単位面積・単位電力あたりの性能では劣る。<span style="font-family: var(--font-mono); color: var(--accent-amber);">SMICの7nm歩留まりは5〜20%</span>、対してNvidia Blackwellは60〜80%。Huaweiのロードマップ(Ascend 960で2027年にBlackwell追従、970で2028年に4 ZettaFLOPS FP4)は野心的だが、各段階でSMICの製造障壁を越える必要がある。<span class="highlight-blue">EUV露光装置にアクセスできない以上、この壁は物理法則に近い硬さを持っている。</span>
+      </p>
+
+      <!-- 歩留まり比較 -->
+      <div class="compare">
+        <div class="compare-title">7nmプロセス歩留まり</div>
+        <div class="compare-row">
+          <span class="compare-label">Blackwell</span>
+          <div class="compare-bar"><div class="compare-bar-fill us" data-width="100%"></div></div>
+          <span class="compare-val">60〜80%</span>
+        </div>
+        <div class="compare-row">
+          <span class="compare-label">SMIC 7nm</span>
+          <div class="compare-bar"><div class="compare-bar-fill cn" data-width="18%"></div></div>
+          <span class="compare-val">5〜20%</span>
+        </div>
+      </div>
+
+      <p>
+        それでもHuaweiは、単チップの劣位を<strong>「システムスケール」で補う戦略</strong>で押し切ろうとしている。2026年第4四半期に投入予定の<strong>Atlas 950 SuperPoD</strong>は<span style="font-family: var(--font-mono);">8,192個</span>のAscend 950DTチップを1つの論理マシンとして動作させ、FP8で8 EFLOPS、FP4で16 EFLOPSを叩き出す。さらに64台のSuperPoDを束ねた<strong>Atlas 950 SuperCluster</strong>は<span style="font-family: var(--font-mono);">520,000個以上</span>のAscendチップで524 EFLOPS FP8に到達する。これは<span class="highlight-purple">xAIのColossusを処理ユニット数で2.5倍上回る世界最大規模</span>になる見込みだ。
+      </p>
+
+      <p>
+        個々のチップで負けても、数で押し、光インターコネクトで束ねて、結果的に最大のスパコンを作る。これは2010年代の天河や神威で中国がやってきた「物量でHPCを獲る」戦略の、<strong>AI時代への延長線</strong>だ。生産量も急拡大している。Huaweiは2026年にAscend 910Cを約<span style="font-family: var(--font-mono);">60万ユニット(前年比2倍)</span>製造し、Ascendライン全体で最大<span style="font-family: var(--font-mono);">160万ダイ</span>の供給を計画。主要顧客にAlibaba、Tencent、DeepSeekが含まれる。DeepSeek V4が「Huawei Ascendで動作する」と報じられているのは、この供給地盤の上に中国ラボが本格的に移行し始めている徴候として読める。
+      </p>
+
+      <!-- Atlas視覚化 -->
+      <div class="card glass" style="margin: 24px 0;">
+        <div class="card-title">
+          <i class="fa-solid fa-server" style="color: var(--accent-red-soft); margin-right:6px;"></i>
+          Huawei の物量戦略
+        </div>
+        <div style="margin-top: 14px;">
+          <div style="display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px dashed var(--border); font-size:13px;">
+            <span style="color: var(--text-2);">Ascend 910C</span>
+            <span style="font-family: var(--font-mono); color: var(--text-0);">60万 / 年</span>
+          </div>
+          <div style="display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px dashed var(--border); font-size:13px;">
+            <span style="color: var(--text-2);">Atlas 950 SuperPoD</span>
+            <span style="font-family: var(--font-mono); color: var(--text-0);">8,192 chip / 16 EFLOPS(FP4)</span>
+          </div>
+          <div style="display: flex; justify-content: space-between; padding: 10px 0; font-size:13px;">
+            <span style="color: var(--text-2);">Atlas 950 SuperCluster</span>
+            <span style="font-family: var(--font-mono); color: var(--accent-red-soft);">520,000+ chip</span>
+          </div>
+        </div>
+        <div style="font-size: 11px; color: var(--text-3); margin-top: 10px; line-height: 1.6;">
+          xAI Colossus を処理ユニット数で2.5倍上回る見込み。単チップの劣位を、規模で逆転する作戦。
+        </div>
+      </div>
+
+      <h2>では、未来は。</h2>
+
+      <p>
+        この全体像を踏まえて、<strong>2026年後半から2027年にかけて何が起こるか</strong>を、私は9つの予測として書き出している。DeepSeek V4、計算容量の備蓄戦、AGIタイムラインの答え合わせ、電力、具現化AI、エージェント持久戦、アルゴリズム効率革命、安全性市場、Global South争奪戦。
+      </p>
+
+      <p>
+        そして、それらの予測が相互作用した結果、<span class="highlight-purple">2027年末時点で観測される未来は、大きく3つのシナリオに収斂する</span>と見ている。ブレイクスルー、並走停滞、分断加速。確率も振ってある。
+      </p>
+
+      <!-- CTA 予測 & シナリオへ -->
+      <a class="feature reveal" href="predictions.html">
+        <div class="feature-icon ic-2"><i class="fa-solid fa-crystal-ball"></i></div>
+        <div class="feature-body">
+          <div class="feature-title">9つの予測を読む</div>
+          <div class="feature-desc">DeepSeek V4から Global South まで。</div>
+        </div>
+        <div class="feature-arrow"><i class="fa-solid fa-chevron-right"></i></div>
+      </a>
+
+      <a class="feature reveal" href="scenarios.html">
+        <div class="feature-icon ic-4"><i class="fa-solid fa-code-branch"></i></div>
+        <div class="feature-body">
+          <div class="feature-title">3つの未来シナリオ</div>
+          <div class="feature-desc">確率つきで、2027年末を描く。</div>
+        </div>
+        <div class="feature-arrow"><i class="fa-solid fa-chevron-right"></i></div>
+      </a>
+
+      <p style="margin-top: 40px; padding-top: 28px; border-top: 1px dashed var(--border); font-size: 13.5px; color: var(--text-2); font-style: italic; text-align:center;">
+        「AIの未来は技術だけで決まらず、電力・地政学・人口動態・労働市場と絡み合って進む」 — この認識は、2026年4月時点で固めておくべき基本前提だと思う。あと18ヶ月。その間に、私たちが何を見るかで、たぶん数十年分の未来が決まる。
+      </p>
+
+    </div>
+
+    <div class="divider-text">第2章おわり</div>
+
+    <a class="feature reveal" href="part1.html">
+      <div class="feature-icon ic-1"><i class="fa-solid fa-arrow-left"></i></div>
+      <div class="feature-body">
+        <div class="feature-title">第1章に戻る</div>
+        <div class="feature-desc">同時リリースの所感。</div>
+      </div>
+    </a>
+
+    <a class="feature reveal" href="index.html">
+      <div class="feature-icon ic-8"><i class="fa-solid fa-house"></i></div>
+      <div class="feature-body">
+        <div class="feature-title">目次に戻る</div>
+        <div class="feature-desc">全8章の入口。</div>
+      </div>
+      <div class="feature-arrow"><i class="fa-solid fa-chevron-right"></i></div>
+    </a>
+
+  </main>
+
+  <footer class="footer">
+    <div class="footer-logo">Chapter 02 / fin.</div>
+    <div>© 2026 KIMI K2.6 × Qwen 3.6 の衝撃</div>
+  </footer>
+
+</div>
+
+<nav class="bottom-nav">
+  <a class="bottom-nav-item" href="index.html" data-page="index.html">
+    <i class="fa-solid fa-house"></i><span>ホーム</span>
+  </a>
+  <a class="bottom-nav-item" href="part1.html" data-page="part1.html">
+    <i class="fa-solid fa-newspaper"></i><span>本文</span>
+  </a>
+  <a class="bottom-nav-item" href="predictions.html" data-page="predictions.html">
+    <i class="fa-solid fa-crystal-ball"></i><span>予測</span>
+  </a>
+  <a class="bottom-nav-item" href="data.html" data-page="data.html">
+    <i class="fa-solid fa-chart-column"></i><span>数字</span>
+  </a>
+  <a class="bottom-nav-item" href="timeline.html" data-page="timeline.html">
+    <i class="fa-regular fa-clock"></i><span>年表</span>
+  </a>
+</nav>
+
+<script src="js/main.js"></script>
+</body>
+</html>

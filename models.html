@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#05060a">
+  <meta name="description" content="主要モデルとハードウェア。K2.6 / Qwen3.6 / DeepSeek V4 / Ascend。">
+  <title>モデル & ハードウェア — KIMI K2.6 と Qwen3.6 の衝撃</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700;900&family=Noto+Serif+JP:wght@400;500;700;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="app">
+
+  <header class="appbar">
+    <div class="appbar-title">
+      <a href="index.html" class="appbar-logo" style="text-decoration:none;">K×Q</a>
+      <div class="appbar-text">
+        <div class="t1">MODELS & HARDWARE</div>
+        <div class="t2">モデル & ハードウェア</div>
+      </div>
+    </div>
+    <button class="appbar-action" data-share aria-label="共有">
+      <i class="fa-solid fa-arrow-up-from-bracket"></i>
+    </button>
+  </header>
+
+  <header class="article-header">
+    <div class="article-number">MODELS · HARDWARE</div>
+    <h1 class="article-title">
+      その日、<br>
+      何が<span style="background: var(--gradient-1); -webkit-background-clip: text; background-clip:text; -webkit-text-fill-color: transparent;">動き出した</span>のか。
+    </h1>
+    <div class="article-meta">
+      <span class="article-meta-item"><i class="fa-solid fa-microchip"></i>Model Cards</span>
+      <span class="article-meta-item"><i class="fa-solid fa-server"></i>Hardware</span>
+    </div>
+  </header>
+
+  <section class="section" style="padding-top: 10px;">
+
+    <div class="section-eyebrow reveal">
+      <span class="line"></span><span>FRONTIER MODELS</span>
+    </div>
+    <h2 class="section-title reveal" style="margin-bottom:18px;">2026年4月のフロンティア</h2>
+
+    <!-- KIMI K2.6 -->
+    <article class="pred-card reveal">
+      <div class="pred-card-head" style="background: linear-gradient(135deg, rgba(255,59,74,0.12), rgba(255,182,72,0.06));">
+        <div class="pred-num">MOONSHOT / 北京</div>
+        <div class="pred-title">KIMI K2.6</div>
+      </div>
+      <div class="pred-card-body">
+        <div class="chip-row">
+          <span class="chip c-red">Open-weight</span>
+          <span class="chip c-red">Long-horizon agent</span>
+          <span class="chip c-purple">Muon optimizer</span>
+        </div>
+        <table class="data-table" style="margin-top:4px;">
+          <tbody>
+            <tr><td>リリース</td><td class="mono">2026.04.20</td></tr>
+            <tr><td>自律実行</td><td class="mono">12 時間連続</td></tr>
+            <tr><td>並列サブエージェント</td><td class="mono">300</td></tr>
+            <tr><td>ツール呼び出し</td><td class="mono">4,000+ / タスク</td></tr>
+            <tr><td>主要ベンチ</td><td>SWE-Bench Pro / HLE で首位の欄あり</td></tr>
+            <tr><td>ライセンス</td><td>Open weight</td></tr>
+          </tbody>
+        </table>
+        <p style="margin-top:14px;">
+          <strong>新しい軸は「持久力」。</strong>1回の応答の質ではなく、一晩中壊れずに働き続けられるかが問われる。IQ競争からアスリート競争への転換を象徴するモデル。
+        </p>
+      </div>
+    </article>
+
+    <!-- Qwen 3.6 Max -->
+    <article class="pred-card reveal">
+      <div class="pred-card-head" style="background: linear-gradient(135deg, rgba(155,107,255,0.12), rgba(91,140,255,0.06));">
+        <div class="pred-num">ALIBABA / 杭州</div>
+        <div class="pred-title">Qwen3.6-Max-Preview</div>
+      </div>
+      <div class="pred-card-body">
+        <div class="chip-row">
+          <span class="chip c-purple">Closed</span>
+          <span class="chip c-purple">Hosted</span>
+          <span class="chip c-blue">Two-tier strategy</span>
+        </div>
+        <table class="data-table" style="margin-top:4px;">
+          <tbody>
+            <tr><td>リリース</td><td class="mono">2026.04.20</td></tr>
+            <tr><td>提供形態</td><td>クローズド / ホスト型</td></tr>
+            <tr><td>4日前</td><td>35B-A3B をオープンソース公開</td></tr>
+            <tr><td>Artificial Analysis</td><td class="mono">世界 2位 (1位: Muse Spark)</td></tr>
+            <tr><td>オープン利用シェア推移</td><td class="mono">1.2% → 30% (1年)</td></tr>
+          </tbody>
+        </table>
+        <p style="margin-top:14px;">
+          「下層はオープンで普及させ、最上層はクローズドで収益化する」二層戦略。<strong>Red Hat / Android / Databricks の AI モデル版</strong>と読める。
+        </p>
+      </div>
+    </article>
+
+    <!-- DeepSeek V4 -->
+    <article class="pred-card reveal">
+      <div class="pred-card-head" style="background: linear-gradient(135deg, rgba(91,140,255,0.12), rgba(66,232,224,0.06));">
+        <div class="pred-num">DEEPSEEK / 杭州(想定)</div>
+        <div class="pred-title">DeepSeek V4</div>
+      </div>
+      <div class="pred-card-body">
+        <div class="chip-row">
+          <span class="chip c-blue">Ascend 最適化</span>
+          <span class="chip c-cyan">1M ctx (Engram)</span>
+          <span class="chip c-purple">MLA</span>
+        </div>
+        <table class="data-table" style="margin-top:4px;">
+          <tbody>
+            <tr><td>想定リリース</td><td class="mono">2026 後半</td></tr>
+            <tr><td>動作基盤</td><td>Huawei Ascend(意図的に Nvidia/AMD 拒否)</td></tr>
+            <tr><td>パラメータ</td><td class="mono">1兆 MoE(噂)</td></tr>
+            <tr><td>コンテキスト</td><td class="mono">1M tokens (Engram)</td></tr>
+            <tr><td>構造</td><td>Multi-head Latent Attention (MLA)</td></tr>
+          </tbody>
+        </table>
+        <p style="margin-top:14px;">
+          <strong>"Ascend時代" の公的な実験。</strong>西側シリコンに依存せずに最前線モデルを作れるかどうかが、ここで試される。
+        </p>
+      </div>
+    </article>
+
+    <!-- Kimi K3 -->
+    <article class="pred-card reveal">
+      <div class="pred-card-head" style="background: linear-gradient(135deg, rgba(255,59,74,0.1), rgba(155,107,255,0.08));">
+        <div class="pred-num">MOONSHOT(ロードマップ)</div>
+        <div class="pred-title">Kimi K3</div>
+      </div>
+      <div class="pred-card-body">
+        <div class="chip-row">
+          <span class="chip c-red">3-4兆 params</span>
+          <span class="chip c-purple">KDA</span>
+          <span class="chip c-blue">Linear attention</span>
+        </div>
+        <p>
+          Reddit リークで言及された Moonshot の内部ロードマップ。<strong>K2.6 の「12時間、300並列」は、K3 のための器を先に作ったという読みが合理的。</strong>
+        </p>
+        <p>
+          Kimi Linear / Kimi Delta Attention(KDA) を採用すれば、長文脈処理 2.9倍、デコーディング 6倍高速化の可能性。
+        </p>
+      </div>
+    </article>
+
+    <div class="divider-text">HARDWARE</div>
+
+    <!-- Ascend 910C / Atlas -->
+    <article class="pred-card reveal">
+      <div class="pred-card-head" style="background: linear-gradient(135deg, rgba(255,59,74,0.1), rgba(255,182,72,0.06));">
+        <div class="pred-num">HUAWEI</div>
+        <div class="pred-title">Ascend 910C & Atlas 950</div>
+      </div>
+      <div class="pred-card-body">
+        <table class="data-table">
+          <tbody>
+            <tr><td>ダイ面積(910C / H100)</td><td class="mono">約 +60%</td></tr>
+            <tr><td>SMIC 7nm 歩留まり</td><td class="mono">5-20%</td></tr>
+            <tr><td>2026 生産量(910C)</td><td class="mono">60万 / 年</td></tr>
+            <tr><td>Ascend ライン合計</td><td class="mono">1.6M ダイ</td></tr>
+            <tr><td>Atlas 950 SuperPoD</td><td class="mono">8,192 / 16 EFLOPS(FP4)</td></tr>
+            <tr><td>Atlas 950 SuperCluster</td><td class="mono">520K+ / 524 EFLOPS(FP8)</td></tr>
+            <tr><td>主要顧客</td><td>Alibaba / Tencent / DeepSeek</td></tr>
+          </tbody>
+        </table>
+        <p style="margin-top:14px;">
+          個々のチップで負けても、数で押し、光インターコネクトで束ねる。<strong>xAI Colossus を処理ユニット数で 2.5倍上回る世界最大規模</strong>になる見込み。
+        </p>
+      </div>
+    </article>
+
+    <!-- Nvidia / 米国側 -->
+    <article class="pred-card reveal">
+      <div class="pred-card-head" style="background: linear-gradient(135deg, rgba(91,140,255,0.12), rgba(66,232,224,0.06));">
+        <div class="pred-num">NVIDIA / AMAZON / MICROSOFT</div>
+        <div class="pred-title">米国側の備蓄戦</div>
+      </div>
+      <div class="pred-card-body">
+        <table class="data-table">
+          <tbody>
+            <tr><td>Anthropic 計算容量</td><td class="mono">最大 5GW(AWS)</td></tr>
+            <tr><td>Anthropic 追加投資</td><td class="mono">最大 $200B</td></tr>
+            <tr><td>OpenAI × AWS</td><td class="mono">7年 $380B</td></tr>
+            <tr><td>Stargate</td><td>中東展開</td></tr>
+            <tr><td>Microsoft / UAE</td><td class="mono">$15.2B 投資</td></tr>
+            <tr><td>目標訓練規模</td><td class="mono">10^28 FLOPs(GPT-4 の 1,000倍)</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </article>
+
+    <!-- アルゴリズム要素技術 -->
+    <div class="divider-text">ALGORITHMIC LAYER</div>
+
+    <div style="display: grid; grid-template-columns: 1fr; gap: 10px; margin-bottom: 20px;">
+      <div class="card reveal">
+        <div class="card-title">Muon Optimizer</div>
+        <p class="card-text">Kimi K2 採用。勾配降下の新しい設計で、従来より効率的に大規模モデルを訓練する。</p>
+      </div>
+      <div class="card reveal">
+        <div class="card-title">Multi-head Latent Attention (MLA)</div>
+        <p class="card-text">DeepSeek が採用する KV キャッシュ圧縮手法。長文脈処理のメモリ負荷を激減させる。</p>
+      </div>
+      <div class="card reveal">
+        <div class="card-title">Kimi Delta Attention (KDA)</div>
+        <p class="card-text">Moonshot。Transformer の二次計算量を線形に近づけるハイブリッド設計。長文脈 2.9倍、デコーディング 6倍。</p>
+      </div>
+      <div class="card reveal">
+        <div class="card-title">Engram Conditional Memory</div>
+        <p class="card-text">DeepSeek V4 の 1M トークン処理を支える、条件付きメモリ機構。リポ全体解析、エージェント長期記憶へ。</p>
+      </div>
+    </div>
+
+    <a class="feature reveal" href="index.html">
+      <div class="feature-icon ic-8"><i class="fa-solid fa-house"></i></div>
+      <div class="feature-body">
+        <div class="feature-title">目次に戻る</div>
+      </div>
+      <div class="feature-arrow"><i class="fa-solid fa-chevron-right"></i></div>
+    </a>
+
+  </section>
+
+  <footer class="footer">
+    <div class="footer-logo">Models & Hardware</div>
+    <div>© 2026 KIMI K2.6 × Qwen 3.6 の衝撃</div>
+  </footer>
+
+</div>
+
+<nav class="bottom-nav">
+  <a class="bottom-nav-item" href="index.html" data-page="index.html">
+    <i class="fa-solid fa-house"></i><span>ホーム</span>
+  </a>
+  <a class="bottom-nav-item" href="part1.html" data-page="part1.html">
+    <i class="fa-solid fa-newspaper"></i><span>本文</span>
+  </a>
+  <a class="bottom-nav-item" href="predictions.html" data-page="predictions.html">
+    <i class="fa-solid fa-crystal-ball"></i><span>予測</span>
+  </a>
+  <a class="bottom-nav-item" href="data.html" data-page="data.html">
+    <i class="fa-solid fa-chart-column"></i><span>数字</span>
+  </a>
+  <a class="bottom-nav-item" href="timeline.html" data-page="timeline.html">
+    <i class="fa-regular fa-clock"></i><span>年表</span>
+  </a>
+</nav>
+
+<script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#05060a">
+  <meta name="description" content="数字で見るAI 2026。投資額、論文、特許、電力、研究者の流れ、モデル性能 — すべての数字を一つの画面に。">
+  <title>数字で見るAI 2026 — KIMI K2.6 と Qwen3.6 の衝撃</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700;900&family=Noto+Serif+JP:wght@400;500;700;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="app">
+
+  <header class="appbar">
+    <div class="appbar-title">
+      <a href="index.html" class="appbar-logo" style="text-decoration:none;">K×Q</a>
+      <div class="appbar-text">
+        <div class="t1">DATA DASHBOARD</div>
+        <div class="t2">数字で見るAI 2026</div>
+      </div>
+    </div>
+    <button class="appbar-action" data-share aria-label="共有">
+      <i class="fa-solid fa-arrow-up-from-bracket"></i>
+    </button>
+  </header>
+
+  <header class="article-header">
+    <div class="article-number">DATA · AI INDEX 2026</div>
+    <h1 class="article-title">
+      数字は、<br>
+      <span style="background: var(--gradient-2); -webkit-background-clip: text; background-clip:text; -webkit-text-fill-color: transparent;">物語より雄弁</span>だ。
+    </h1>
+    <div class="article-meta">
+      <span class="article-meta-item"><i class="fa-solid fa-chart-column"></i>Stanford AI Index 2026</span>
+      <span class="article-meta-item"><i class="fa-regular fa-clock"></i>5分</span>
+    </div>
+  </header>
+
+  <section class="section" style="padding-top: 10px;">
+
+    <!-- ビッグナンバー -->
+    <div class="stat-grid">
+      <div class="stat-card reveal">
+        <div class="stat-label">米国民間AI投資</div>
+        <div class="stat-value">$<span data-count="2859">0</span><span class="unit">B</span></div>
+        <div class="stat-sub">2024累積</div>
+      </div>
+      <div class="stat-card v-warm reveal">
+        <div class="stat-label">中国民間AI投資</div>
+        <div class="stat-value">$<span data-count="124">0</span><span class="unit">B</span></div>
+        <div class="stat-sub">約 1/23</div>
+      </div>
+      <div class="stat-card v-purple reveal">
+        <div class="stat-label">Arena 性能差</div>
+        <div class="stat-value"><span data-count="2.7">0</span><span class="unit">%</span></div>
+        <div class="stat-sub">39pt / 3年前は300pt超</div>
+      </div>
+      <div class="stat-card v-blue reveal">
+        <div class="stat-label">研究者流入</div>
+        <div class="stat-value">−<span data-count="89">0</span><span class="unit">%</span></div>
+        <div class="stat-sub">2017年以降</div>
+      </div>
+    </div>
+
+    <!-- 投資額チャート -->
+    <div class="chart-wrap reveal">
+      <div class="chart-wrap-title">民間AI投資(2024)</div>
+      <div class="chart-wrap-sub">単位: 10億ドル / Stanford AI Index 2026</div>
+      <div class="chart-holder" style="height: 240px;">
+        <canvas id="invChart"></canvas>
+      </div>
+    </div>
+
+    <!-- 論文・引用・特許 -->
+    <div class="chart-wrap reveal">
+      <div class="chart-wrap-title">研究アウトプットの逆転</div>
+      <div class="chart-wrap-sub">2024 / 世界シェア %</div>
+      <div class="chart-holder" style="height: 280px;">
+        <canvas id="researchChart"></canvas>
+      </div>
+    </div>
+
+    <!-- 性能差の収斂 -->
+    <div class="chart-wrap reveal">
+      <div class="chart-wrap-title">米中 最上位モデル 性能差の推移</div>
+      <div class="chart-wrap-sub">Arena ポイント差 / 少ないほど並ぶ</div>
+      <div class="chart-holder" style="height: 240px;">
+        <canvas id="gapChart"></canvas>
+      </div>
+    </div>
+
+    <!-- リリースケイデンス -->
+    <div class="chart-wrap reveal">
+      <div class="chart-wrap-title">加速するリリース間隔</div>
+      <div class="chart-wrap-sub">主要モデル / 日数(推定)</div>
+      <div class="chart-holder" style="height: 280px;">
+        <canvas id="cadenceChart"></canvas>
+      </div>
+    </div>
+
+    <!-- 電力ボトルネック -->
+    <section class="section-head" style="margin-top:40px;">
+      <div class="section-eyebrow">
+        <span class="line"></span><span>POWER</span>
+      </div>
+      <h2 class="section-title">電力が、<br>次の天井をつくる。</h2>
+    </section>
+
+    <div class="stat-grid">
+      <div class="stat-card v-warm reveal">
+        <div class="stat-label">🇺🇸 追加電力必要(27)</div>
+        <div class="stat-value">+<span data-count="29">0</span><span class="unit">GW</span></div>
+        <div class="stat-sub">Eric Schmidt / 議会証言</div>
+      </div>
+      <div class="stat-card v-warm reveal">
+        <div class="stat-label">🇺🇸 追加電力(30)</div>
+        <div class="stat-value">+<span data-count="67">0</span><span class="unit">GW</span></div>
+        <div class="stat-sub">2030年時点</div>
+      </div>
+      <div class="stat-card v-purple reveal">
+        <div class="stat-label">Anthropic単一訓練</div>
+        <div class="stat-value"><span data-count="5">0</span><span class="unit">GW</span></div>
+        <div class="stat-sub">2027年想定</div>
+      </div>
+      <div class="stat-card reveal">
+        <div class="stat-label">🇨🇳 年間新設</div>
+        <div class="stat-value">+<span data-count="400">0</span><span class="unit">GW+</span></div>
+        <div class="stat-sub">米国の10倍以上</div>
+      </div>
+    </div>
+
+    <div class="chart-wrap reveal">
+      <div class="chart-wrap-title">PJM 容量市場 約定価格</div>
+      <div class="chart-wrap-sub">単位: $/MW / 年度</div>
+      <div class="chart-holder" style="height: 240px;">
+        <canvas id="powerChart"></canvas>
+      </div>
+    </div>
+
+    <!-- ハードウェア -->
+    <section class="section-head" style="margin-top:40px;">
+      <div class="section-eyebrow">
+        <span class="line"></span><span>HARDWARE</span>
+      </div>
+      <h2 class="section-title">チップ個別で負け、<br>数で逆転する。</h2>
+    </section>
+
+    <div class="compare reveal">
+      <div class="compare-title">7nm歩留まり</div>
+      <div class="compare-row">
+        <span class="compare-label">🇺🇸 Blackwell</span>
+        <div class="compare-bar"><div class="compare-bar-fill us" data-width="100%"></div></div>
+        <span class="compare-val">60-80%</span>
+      </div>
+      <div class="compare-row">
+        <span class="compare-label">🇨🇳 SMIC</span>
+        <div class="compare-bar"><div class="compare-bar-fill cn" data-width="18%"></div></div>
+        <span class="compare-val">5-20%</span>
+      </div>
+    </div>
+
+    <div class="compare reveal">
+      <div class="compare-title">スーパークラスタ規模比較(チップ数)</div>
+      <div class="compare-row">
+        <span class="compare-label">xAI Colossus</span>
+        <div class="compare-bar"><div class="compare-bar-fill us" data-width="40%"></div></div>
+        <span class="compare-val">~200K</span>
+      </div>
+      <div class="compare-row">
+        <span class="compare-label">Atlas 950</span>
+        <div class="compare-bar"><div class="compare-bar-fill cn" data-width="100%"></div></div>
+        <span class="compare-val">520K+</span>
+      </div>
+    </div>
+
+    <table class="data-table reveal">
+      <thead>
+        <tr>
+          <th>構成</th>
+          <th>チップ数</th>
+          <th>FP8 EFLOPS</th>
+          <th>投入時期</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Atlas 950 SuperPoD</td><td class="mono">8,192</td><td class="mono">8</td><td>2026 Q4</td></tr>
+        <tr><td>Atlas 950 SuperCluster</td><td class="mono">520K+</td><td class="mono">524</td><td>2026 Q4</td></tr>
+        <tr><td>Ascend 910C 生産量</td><td class="mono">60万/年</td><td>—</td><td>2026</td></tr>
+        <tr><td>Ascend ライン合計</td><td class="mono">1.6M</td><td>—</td><td>2026</td></tr>
+      </tbody>
+    </table>
+
+    <!-- 具現化AI -->
+    <section class="section-head" style="margin-top:40px;">
+      <div class="section-eyebrow">
+        <span class="line"></span><span>EMBODIED AI</span>
+      </div>
+      <h2 class="section-title">ロボット、<br>中国がすでに9倍。</h2>
+    </section>
+
+    <div class="chart-wrap reveal">
+      <div class="chart-wrap-title">産業ロボット設置台数(年間)</div>
+      <div class="chart-wrap-sub">単位: 万台 / 最新年</div>
+      <div class="chart-holder" style="height: 220px;">
+        <canvas id="robotChart"></canvas>
+      </div>
+    </div>
+
+    <div class="card glass reveal" style="padding: 24px;">
+      <div style="font-family: var(--font-serif); font-size: 48px; font-weight:900; line-height:1; background: var(--gradient-warm); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;">
+        300,000,000
+      </div>
+      <div style="font-size: 12px; color: var(--text-2); letter-spacing: 0.08em; text-transform: uppercase; margin-top:8px; font-weight:700;">
+        Humanoid units, future Chinese deployment
+      </div>
+      <div style="font-size: 13px; color: var(--text-1); margin-top:10px; line-height:1.8;">
+        中国は人口動態的衰退を補うため、将来的に <strong>3億台規模のヒューマノイドロボット導入</strong>を議論している(Recorded Future)。
+      </div>
+    </div>
+
+    <!-- 注釈 -->
+    <div class="card reveal" style="margin-top: 22px; background: var(--surface); border-color: var(--border);">
+      <div class="card-title" style="font-size: 13px;">
+        <i class="fa-solid fa-circle-info" style="color: var(--accent-blue); margin-right:6px;"></i>
+        データソースについて
+      </div>
+      <p class="card-text" style="font-size: 12.5px; line-height: 1.8; margin:10px 0 0;">
+        本ページの数字は Stanford AI Index 2026、Reuters、The Information、Carnegie Endowment、Recorded Future、Gartner、PJM、Huawei 公式ロードマップ、Anthropic / OpenAI 公式声明 などから採用。比較表の一部はベンダー発表を含むため、<a href="part1.html" style="color: var(--accent-blue);">第1章で触れた通り</a>、独立検証が望ましい。
+      </p>
+    </div>
+
+    <a class="feature reveal" href="index.html" style="margin-top: 20px;">
+      <div class="feature-icon ic-8"><i class="fa-solid fa-house"></i></div>
+      <div class="feature-body">
+        <div class="feature-title">目次に戻る</div>
+      </div>
+      <div class="feature-arrow"><i class="fa-solid fa-chevron-right"></i></div>
+    </a>
+
+  </section>
+
+  <footer class="footer">
+    <div class="footer-logo">Data Dashboard</div>
+    <div>© 2026 KIMI K2.6 × Qwen 3.6 の衝撃</div>
+  </footer>
+
+</div>
+
+<nav class="bottom-nav">
+  <a class="bottom-nav-item" href="index.html" data-page="index.html">
+    <i class="fa-solid fa-house"></i><span>ホーム</span>
+  </a>
+  <a class="bottom-nav-item" href="part1.html" data-page="part1.html">
+    <i class="fa-solid fa-newspaper"></i><span>本文</span>
+  </a>
+  <a class="bottom-nav-item" href="predictions.html" data-page="predictions.html">
+    <i class="fa-solid fa-crystal-ball"></i><span>予測</span>
+  </a>
+  <a class="bottom-nav-item" href="data.html" data-page="data.html">
+    <i class="fa-solid fa-chart-column"></i><span>数字</span>
+  </a>
+  <a class="bottom-nav-item" href="timeline.html" data-page="timeline.html">
+    <i class="fa-regular fa-clock"></i><span>年表</span>
+  </a>
+</nav>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+<script src="js/main.js"></script>
+<script>
+  /* Chart 共通設定 */
+  if (typeof Chart !== "undefined") {
+    Chart.defaults.color = "#8a8fa0";
+    Chart.defaults.borderColor = "rgba(255,255,255,0.06)";
+    Chart.defaults.font.family = '"Noto Sans JP", -apple-system, sans-serif';
+  }
+
+  document.addEventListener("DOMContentLoaded", function () {
+    if (typeof Chart === "undefined") return;
+
+    const commonTooltip = {
+      backgroundColor: "rgba(11, 13, 20, 0.95)",
+      borderColor: "rgba(255,255,255,0.14)",
+      borderWidth: 1,
+      padding: 12,
+      titleColor: "#f5f6fa",
+      bodyColor: "#c9ccd6"
+    };
+
+    // 投資
+    new Chart(document.getElementById("invChart"), {
+      type: "bar",
+      data: {
+        labels: ["🇺🇸 米国", "🇨🇳 中国"],
+        datasets: [{
+          label: "$B",
+          data: [2859, 124],
+          backgroundColor: ["rgba(91,140,255,0.8)", "rgba(255,59,74,0.8)"],
+          borderRadius: 12,
+          barThickness: 60
+        }]
+      },
+      options: {
+        indexAxis: "y",
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: { legend:{display:false}, tooltip: commonTooltip },
+        scales: {
+          x: { ticks: { callback: (v) => "$" + v + "B" }, grid: { color: "rgba(255,255,255,0.05)" } },
+          y: { grid: { display: false }, ticks: { font: { size: 14 } } }
+        }
+      }
+    });
+
+    // 論文・引用・特許
+    new Chart(document.getElementById("researchChart"), {
+      type: "bar",
+      data: {
+        labels: ["論文シェア", "引用シェア", "特許シェア"],
+        datasets: [
+          { label: "🇺🇸 米国", data: [7.6, 12.6, 20], backgroundColor: "rgba(91,140,255,0.8)", borderRadius: 8 },
+          { label: "🇨🇳 中国", data: [17.8, 20.6, 70], backgroundColor: "rgba(255,59,74,0.8)", borderRadius: 8 }
+        ]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: { position: "bottom", labels: { color: "#c9ccd6", font: { size: 12 }, padding: 14 } },
+          tooltip: { ...commonTooltip, callbacks: { label: (c) => ` ${c.dataset.label}: ${c.parsed.y}%` } }
+        },
+        scales: {
+          y: { beginAtZero: true, max: 80, ticks: { callback: (v) => v + "%" }, grid: { color: "rgba(255,255,255,0.05)" } },
+          x: { grid: { display: false } }
+        }
+      }
+    });
+
+    // 性能差
+    new Chart(document.getElementById("gapChart"), {
+      type: "line",
+      data: {
+        labels: ["2023", "2024前", "2024後", "2025前", "2025後", "2026.04"],
+        datasets: [{
+          label: "Arena ポイント差",
+          data: [320, 220, 140, 90, 55, 39],
+          borderColor: "rgba(155,107,255,1)",
+          backgroundColor: "rgba(155,107,255,0.15)",
+          fill: true,
+          tension: 0.35,
+          borderWidth: 3,
+          pointBackgroundColor: "rgba(155,107,255,1)",
+          pointRadius: 4,
+          pointHoverRadius: 6
+        }]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: { legend: { display: false }, tooltip: commonTooltip },
+        scales: {
+          y: { beginAtZero: true, grid: { color: "rgba(255,255,255,0.05)" }, ticks: { callback: (v) => v + "pt" } },
+          x: { grid: { display: false } }
+        }
+      }
+    });
+
+    // リリースケイデンス
+    new Chart(document.getElementById("cadenceChart"), {
+      type: "bar",
+      data: {
+        labels: ["GPT-4→4-Turbo", "Claude 3→3.5", "K2→K2.5", "K2.5→K2.6", "Qwen3.6+→Max"],
+        datasets: [{
+          label: "日数",
+          data: [240, 120, 90, 60, 21],
+          backgroundColor: (ctx) => {
+            const v = ctx.parsed.y ?? ctx.dataset.data[ctx.dataIndex];
+            if (v <= 30) return "rgba(255,59,74,0.8)";
+            if (v <= 90) return "rgba(155,107,255,0.8)";
+            return "rgba(91,140,255,0.7)";
+          },
+          borderRadius: 8
+        }]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: { legend: { display: false }, tooltip: { ...commonTooltip, callbacks: { label: (c) => ` ${c.parsed.y} 日` } } },
+        scales: {
+          y: { beginAtZero: true, grid: { color: "rgba(255,255,255,0.05)" }, ticks: { callback: (v) => v + "日" } },
+          x: { grid: { display: false }, ticks: { font: { size: 10 }, maxRotation: 30, minRotation: 30 } }
+        }
+      }
+    });
+
+    // PJM 電力価格
+    new Chart(document.getElementById("powerChart"), {
+      type: "bar",
+      data: {
+        labels: ["2024-25", "2025-26", "2026-27"],
+        datasets: [{
+          label: "$/MW",
+          data: [28.92, 269.92, 329.17],
+          backgroundColor: ["rgba(53,212,138,0.7)", "rgba(255,182,72,0.8)", "rgba(255,59,74,0.85)"],
+          borderRadius: 10
+        }]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: { legend: { display: false }, tooltip: { ...commonTooltip, callbacks: { label: (c) => ` $${c.parsed.y}/MW` } } },
+        scales: {
+          y: { beginAtZero: true, grid: { color: "rgba(255,255,255,0.05)" }, ticks: { callback: (v) => "$" + v } },
+          x: { grid: { display: false } }
+        }
+      }
+    });
+
+    // ロボット
+    new Chart(document.getElementById("robotChart"), {
+      type: "doughnut",
+      data: {
+        labels: ["🇨🇳 中国", "🇺🇸 米国"],
+        datasets: [{
+          data: [29.5, 3.4],
+          backgroundColor: ["rgba(255,59,74,0.85)", "rgba(91,140,255,0.85)"],
+          borderColor: "rgba(5,6,10,1)",
+          borderWidth: 3,
+          hoverOffset: 6
+        }]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        cutout: "62%",
+        plugins: {
+          legend: { position: "bottom", labels: { color: "#c9ccd6", padding: 14, font: { size: 12 } } },
+          tooltip: { ...commonTooltip, callbacks: { label: (c) => ` ${c.label}: ${c.parsed}万台` } }
+        }
+      }
+    });
+  });
+</script>
+</body>
+</html>

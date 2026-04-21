@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#05060a">
+  <meta name="description" content="記事に登場する固有名詞・技術用語の解説。">
+  <title>用語集 — KIMI K2.6 と Qwen3.6 の衝撃</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700;900&family=Noto+Serif+JP:wght@400;500;700;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .gl-item {
+      padding: 18px 20px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      margin-bottom: 10px;
+    }
+    .gl-term {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--text-0);
+      margin-bottom: 4px;
+      letter-spacing: -0.01em;
+    }
+    .gl-cat {
+      display: inline-block;
+      font-family: var(--font-mono);
+      font-size: 10px;
+      padding: 2px 8px;
+      border-radius: 100px;
+      background: rgba(91,140,255,0.12);
+      color: var(--accent-blue);
+      margin-bottom: 8px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+    }
+    .gl-cat.cat-model { background: rgba(255,59,74,0.12); color: var(--accent-red-soft); }
+    .gl-cat.cat-hw { background: rgba(255,182,72,0.12); color: var(--accent-amber); }
+    .gl-cat.cat-org { background: rgba(155,107,255,0.12); color: var(--accent-purple); }
+    .gl-cat.cat-alg { background: rgba(66,232,224,0.1); color: var(--accent-cyan); }
+    .gl-cat.cat-bench { background: rgba(53,212,138,0.1); color: var(--accent-green); }
+    .gl-def {
+      font-size: 13.5px;
+      line-height: 1.8;
+      color: var(--text-1);
+      margin: 0;
+    }
+    .letter-head {
+      font-family: var(--font-serif);
+      font-size: 44px;
+      font-weight: 900;
+      background: var(--gradient-1);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin: 30px 0 12px;
+      line-height: 1;
+      letter-spacing: -0.02em;
+    }
+  </style>
+</head>
+<body>
+
+<div class="app">
+
+  <header class="appbar">
+    <div class="appbar-title">
+      <a href="index.html" class="appbar-logo" style="text-decoration:none;">K×Q</a>
+      <div class="appbar-text">
+        <div class="t1">GLOSSARY</div>
+        <div class="t2">用語集</div>
+      </div>
+    </div>
+    <button class="appbar-action" data-share aria-label="共有">
+      <i class="fa-solid fa-arrow-up-from-bracket"></i>
+    </button>
+  </header>
+
+  <header class="article-header">
+    <div class="article-number">GLOSSARY · A—Z</div>
+    <h1 class="article-title">
+      用語を<br>
+      ひととおり、<br>
+      <span style="background: var(--gradient-2); -webkit-background-clip: text; background-clip:text; -webkit-text-fill-color: transparent;">手元に。</span>
+    </h1>
+    <div class="article-meta">
+      <span class="article-meta-item"><i class="fa-solid fa-book"></i>40+ 用語</span>
+    </div>
+  </header>
+
+  <section class="section" style="padding-top: 10px;">
+
+    <div class="card glass reveal" style="margin-bottom: 24px;">
+      <p style="font-size:13.5px; color: var(--text-1); margin:0; line-height:1.9;">
+        本エッセイに登場する、モデル名・組織名・ハードウェア・アルゴリズム・ベンチマークなどを A→Z / あ→わ の順で並べた。読み物に戻るときのためのリファレンス。
+      </p>
+    </div>
+
+    <!-- カテゴリ凡例 -->
+    <div class="chip-row reveal" style="margin-bottom: 20px;">
+      <span class="chip c-red">モデル</span>
+      <span class="chip c-amber">ハードウェア</span>
+      <span class="chip c-purple">組織・人物</span>
+      <span class="chip c-cyan">アルゴリズム</span>
+      <span class="chip c-green">ベンチマーク</span>
+      <span class="chip c-blue">概念</span>
+    </div>
+
+    <!-- A-E -->
+    <div class="letter-head reveal">A — E</div>
+
+    <div class="gl-item reveal">
+      <span class="gl-cat cat-org">ORGANIZATION</span>
+      <div class="gl-term">Alibaba(杭州)</div>
+      <p class="gl-def">Qwen シリーズの開発元。2026年4月20日に Qwen3.6-Max-Preview をリリース。下層オープン × 上層クローズドの二層戦略で、Red Hat / Android / Databricks の AI 版モデルを実践。</p>
+    </div>
+
+    <div class="gl-item reveal">
+      <span class="gl-cat cat-org">ORGANIZATION</span>
+      <div class="gl-term">Anthropic</div>
+      <p class="gl-def">Claude シリーズの開発元。2025年3月の OSTP 提言書で「late 2026 / early 2027 に "powerful AI" 登場」という公式予測を公開。AWS から最大 5GW の計算容量を確保。</p>
+    </div>
+
+    <div class="gl-item reveal">
+      <span class="gl-cat cat-hw">HARDWARE</span>
+      <div class="gl-term">Ascend 910C / 950 / 960 / 970</div>
+      <p class="gl-def">Huawei の AI チップシリーズ。910C は 2026年 60万ユニット生産予定。960 で 2027年 Blackwell 追従、970 で 2028年 4 ZettaFLOPS FP4 を目標とするロードマップ。</p>
+    </div>
+
+    <div class="gl-item reveal">
+      <span class="gl-cat cat-hw">HARDWARE</span>
+      <div class="gl-term">Atlas 950 SuperPoD / SuperCluster</div>
+      <p class="gl-def">Huawei の AI スーパーコンピュータ。SuperPoD は 8,192 チップで FP4 16 EFLOPS。SuperCluster は 64台束ねて 520,000+ チップ、524 EFLOPS FP8。xAI Colossus を処理ユニット数で 2.5倍上回る世界最大規模。</p>
+    </div>
+
+    <div class="gl-item reveal">
+      <span class="gl-cat cat-bench">BENCHMARK</span>
+      <div class="gl-term">Arena(Chatbot Arena)</div>
+      <p class="gl-def">人間による投票でモデルを比較する評価基盤。2023年 GPT-4 は中国最上位に 300pt+ の差を付けていたが、2026年4月時点では 39pt 差(2.7%)まで縮まった。</p>
+    </div>
+
+    <div class="gl-item reveal">
+      <span class="gl-cat cat-hw">HARDWARE</span>
+      <div class="gl-term">Blackwell</div>
+      <p class="gl-def">Nvidia の最新世代 GPU。7nm プロセス歩留まり 60-80%。Ascend 910C と比べダイ面積あたり性能で優位。</p>
+    </div>
+
+    <div class="gl-item reveal">
+      <span class="gl-cat cat-alg">ALGORITHM</span>
+      <div class="gl-term">CANN / MindSpore</div>
+      <p class="gl-def">Huawei Ascend 上のソフトウェアスタック。CUDA + PyTorch との実運用上の成熟度差が、"Ascend時代" の成否を左右する。</p>
+    </div>
+
+    <div class="gl-item reveal">
+      <span class="gl-cat cat-org">ORGANIZATION</span>
+      <div class="gl-term">CAISI(Centre for AI Standards and Innovation)</div>
+      <p class="gl-def">米国の AI 標準化機関。中国モデル(DeepSeek 等)を「adversary AI」と位置付けたレポートを公開。</p>
+    </div>
+
+    <div class="gl-item reveal">
+      <span class="gl-cat cat-hw">HARDWARE</span>
+      <div class="gl-term">Colossus(xAI)</div>
+      <p class="gl-def">xAI の大規模スパコン。Atlas 950 SuperCluster に処理ユニット数で 2.5倍追い抜かれる見込み。</p>
+    </div>
+
+    <div class="gl-item reveal">
+      <span class="gl-cat cat-model">MODEL</span>
+      <div class="gl-term">DeepSeek R1 / V4</div>
+      <p class="gl-def">DeepSeek の推論モデル / 次世代。V4 は Huawei Ascend 上で動作するよう最適化され、Nvidia / AMD への早期アクセスを拒否。1兆パラメータ MoE、1M トークンコンテキスト(Engram)が噂される。</p>
+    </div>
+
+    <div class="gl-item reveal">
+      <span class="gl-cat cat-blue">CONCEPT</span>
+      <div class="gl-term">Embodied AI(具現化AI)</div>
+      <p class="gl-def">身体を持つAI。中国の産業ロボット設置台数は米国の9倍(29.5万 vs 3.4万)。将来的に3億台ヒューマノイド導入も議論される。AGIへの鍵である可能性も論じられる。</p>
+    </div>
+
+    <div class="gl-item reveal">
+      <span class="gl-cat cat-alg">ALGORITHM</span>
+      <div class="gl-term">Engram(条件付きメモリ)</div>
+      <p class="gl-def">DeepSeek V4 の 1M トークンコンテキストを支えると噂される機構。リポジトリ全体解析、エージェント長期記憶などの新用途を開く。</p>
+    </div>
+
+    <!-- F-K -->
+    <div class="letter-head reveal">F — K</div>
+
+    <div class="gl-item reveal">
+      <span class="gl-cat cat-org">ORGANIZATION</span>
+      <div class="gl-term">Figure AI / Apptronik / UBTech</div>
+      <p class="gl-def">ヒューマノイドロボット企業。Figure は家庭展開を 2025-26 のパイロット範囲で。UBTech は中国自動車工場で最初のヒューマノイド・チーム展開済み。</p>
+    </div>
+
+    <div class="gl-item reveal">
+      <span class="gl-cat cat-model">MODEL</span>
+      <div class="gl-term">GPT-5.4 / Claude Opus 4.6</div>
+      <p class="gl-def">2026年4月時点の米国フロンティアモデル。SWE-Bench Pro / HLE で K2.6 と並び、一部の欄で追い抜かれた。</p>
+    </div>
+
+    <div class="gl-item reveal">
+      <span class="gl-cat cat-bench">BENCHMARK</span>
+      <div class="gl-term">HLE(Humanity's Last Exam)</div>
+      <p class="gl-def">人類最後の試験。最高難度の評価基盤のひとつ。K2.6 がここでも首位欄に並んだことで「追い抜く」という動詞が初めて書き換えられた。</p>
+    </div>
+
+    <div class="gl-item reveal">
+      <span class="gl-cat cat-org">ORGANIZATION</span>
+      <div class="gl-term">Huawei</div>
+      <p class="gl-def">Ascend チップ / Atlas スパコンの開発元。2026年に Ascend ライン合計 1.6M ダイの供給を計画。Alibaba、Tencent、DeepSeek が主要顧客。</p>
+    </div>
+
+    <div class="gl-item reveal">
+      <span class="gl-cat cat-alg">ALGORITHM</span>
+      <div class="gl-term">Kimi Delta Attention (KDA) / Kimi Linear</div>
+      <p class="gl-def">Moonshot の線形系アテンション設計。Transformer の二次計算量を線形に近づけ、長文脈 2.9倍・デコーディング 6倍高速化の可能性。</p>
+    </div>
+
+    <div class="gl-item reveal">
+      <span class="gl-cat cat-model">MODEL</span>
+      <div class="gl-term">Kimi K2.5 / K2.6 / K3</div>
+      <p class="gl-def">Moonshot のフラッグシップ。K2.5→K2.6 は 2ヶ月。K2.6 は 12時間自律実行 / 300並列 / 4,000+ ツール呼び出し。K3 は 3-4兆パラメータ規模が内部ロードマップに。</p>
+    </div>
+
+    <!-- L-P -->
+    <div class="letter-head reveal">L — P</div>
+
+    <div class="gl-item reveal">
+      <span class="gl-cat cat-model">MODEL</span>
+      <div class="gl-term">LLaMA</div>
+      <p class="gl-def">Meta のオープンウェイトモデル。「フロンティアに肉薄」したが、特定ワークロードで「首位を獲った」ことはなかった。K2.6 がこの境界を初めて越えた可能性。</p>
+    </div>
+
+    <div class="gl-item reveal">
+      <span class="gl-cat cat-alg">ALGORITHM</span>
+      <div class="gl-term">MLA(Multi-head Latent Attention)</div>
+      <p class="gl-def">DeepSeek の KV キャッシュ圧縮。長文脈処理のメモリ負荷を激減させる。MoE との組み合わせで効率を極限化。</p>
+    </div>
+
+    <div class="gl-item reveal">
+      <span class="gl-cat cat-bench">BENCHMARK</span>
+      <div class="gl-term">METR</div>
+      <p class="gl-def">AI の時間的タスク実行能力を評価する研究所。外挿により「50%信頼性での16時間タスク実行」を 2027 末の現実的到達点と見積もる。</p>
+    </div>
+
+    <div class="gl-item reveal">
+      <span class="gl-cat cat-org">ORGANIZATION</span>
+      <div class="gl-term">Moonshot(北京)</div>
+      <p class="gl-def">Kimi シリーズの開発元。2026年4月20日、K2.6 をオープンウェイトでリリース。長時間エージェント実行の領域で、オープン×フロンティアを初めて成立させた可能性。</p>
+    </div>
+
+    <div class="gl-item reveal">
+      <span class="gl-cat cat-alg">ALGORITHM</span>
+      <div class="gl-term">Muon Optimizer</div>
+      <p class="gl-def">Kimi K2 が採用した新しい最適化アルゴリズム。従来より効率的に大規模モデルを訓練できる。</p>
+    </div>
+
+    <div class="gl-item reveal">
+      <span class="gl-cat cat-model">MODEL</span>
+      <div class="gl-term">Muse Spark</div>
+      <p class="gl-def">Artificial Analysis ベンチで 1位。誰も注目していなかったラボが突然トップに立った例。「突然出てくる最強モデル」現象の象徴。</p>
+    </div>
+
+    <div class="gl-item reveal">
+      <span class="gl-cat cat-hw">HARDWARE</span>
+      <div class="gl-term">Nvidia H100 / H800</div>
+      <p class="gl-def">米国フロンティアラボの主力 GPU。H800 は中国輸出向け。DeepSeek は R1 で H800 を使っていたが、V4 で意図的に Ascend へ移行。</p>
+    </div>
+
+    <div class="gl-item reveal">
+      <span class="gl-cat cat-hw">HARDWARE</span>
+      <div class="gl-term">PJM</div>
+      <p class="gl-def">米国東海岸の送電網運営組織。容量市場約定価格が 2024-25 の $28.92/MW から 2026-27 に $329.17/MW へ 10倍以上に高騰。電力ボトルネックの象徴。</p>
+    </div>
+
+    <div class="gl-item reveal">
+      <span class="gl-cat cat-blue">CONCEPT</span>
+      <div class="gl-term">Powerful AI</div>
+      <p class="gl-def">Anthropic Dario Amodei が "Machines of Loving Grace" で描くビジョン。ノーベル賞受賞者クラスの知性を多数専門領域で発揮する水準。「データセンターの中に天才の国」。</p>
+    </div>
+
+    <!-- Q-U -->
+    <div class="letter-head reveal">Q — U</div>
+
+    <div class="gl-item reveal">
+      <span class="gl-cat cat-model">MODEL</span>
+      <div class="gl-term">Qwen3.6-Max-Preview / 35B-A3B</div>
+      <p class="gl-def">Alibaba の 2026年4月20日リリース。Max はクローズド、4日前の 35B-A3B はオープン。二層戦略の象徴。Qwen オープン利用は 1年で 1.2% → 30% へ。</p>
+    </div>
+
+    <div class="gl-item reveal">
+      <span class="gl-cat cat-org">ORGANIZATION</span>
+      <div class="gl-term">SMIC</div>
+      <p class="gl-def">中国の大手半導体ファウンドリ。7nm プロセス歩留まりは 5-20%。EUV 露光機にアクセスできないことが、Huawei Ascend の物理的な天井。</p>
+    </div>
+
+    <div class="gl-item reveal">
+      <span class="gl-cat cat-bench">BENCHMARK</span>
+      <div class="gl-term">SWE-Bench Pro</div>
+      <p class="gl-def">ソフトウェアエンジニアリング能力を評価する高難度ベンチ。K2.6 が GPT-5.4 / Claude Opus 4.6 と横並びになった主要指標のひとつ。</p>
+    </div>
+
+    <div class="gl-item reveal">
+      <span class="gl-cat cat-org">ORGANIZATION</span>
+      <div class="gl-term">Stanford AI Index 2026</div>
+      <p class="gl-def">スタンフォードが毎年発行するAI統計。2024年の米国民間AI投資 $2,859B、中国 $124B 等の数字ソース。性能差 2.7%、人材流入 −89% もここに。</p>
+    </div>
+
+    <div class="gl-item reveal">
+      <span class="gl-cat cat-org">ORGANIZATION</span>
+      <div class="gl-term">Stargate</div>
+      <p class="gl-def">米国主導の巨大データセンター投資プロジェクト。中東展開も進む。Global South 争奪戦の米国側の切り札。</p>
+    </div>
+
+    <div class="gl-item reveal">
+      <span class="gl-cat cat-org">ORGANIZATION</span>
+      <div class="gl-term">天河 / 神威</div>
+      <p class="gl-def">2010年代に中国が世界最速の座を争った HPC シリーズ。Atlas 950 SuperCluster は、その「物量で HPC を獲る」戦略の AI 時代への延長線。</p>
+    </div>
+
+    <!-- その他 -->
+    <div class="letter-head reveal">あ — わ</div>
+
+    <div class="gl-item reveal">
+      <span class="gl-cat cat-blue">CONCEPT</span>
+      <div class="gl-term">AIマネージャー</div>
+      <p class="gl-def">部下10人の課長から、エージェント1,000体を監督するオペレーターへの転換。持久戦AIが実運用化する 2026-27 年に出現すると予想される役割。</p>
+    </div>
+
+    <div class="gl-item reveal">
+      <span class="gl-cat cat-blue">CONCEPT</span>
+      <div class="gl-term">二層戦略</div>
+      <p class="gl-def">Alibaba が Qwen で実行中。「下層はオープンで普及、最上層はクローズドで収益化」。Red Hat / Android / Databricks の AI 版。</p>
+    </div>
+
+    <div class="gl-item reveal">
+      <span class="gl-cat cat-blue">CONCEPT</span>
+      <div class="gl-term">持久力パラダイム</div>
+      <p class="gl-def">1回の応答の質ではなく、一晩中壊れずに働き続けられるかを問う評価軸。IQ 競争からアスリート競争への移行。K2.6 が提示した「新しい軸」。</p>
+    </div>
+
+    <div class="gl-item reveal">
+      <span class="gl-cat cat-blue">CONCEPT</span>
+      <div class="gl-term">地図の「種類」が変わった</div>
+      <p class="gl-def">2024年までの「単一ランキング」が崩れ、用途別に複数の地図が並立する状態へ。長時間エージェント、フロントエンド生成、数学、視覚、多言語、安全性 — それぞれで首位が違う。</p>
+    </div>
+
+    <a class="feature reveal" href="index.html" style="margin-top:22px;">
+      <div class="feature-icon ic-8"><i class="fa-solid fa-house"></i></div>
+      <div class="feature-body">
+        <div class="feature-title">目次に戻る</div>
+      </div>
+      <div class="feature-arrow"><i class="fa-solid fa-chevron-right"></i></div>
+    </a>
+
+  </section>
+
+  <footer class="footer">
+    <div class="footer-logo">Glossary</div>
+    <div>© 2026 KIMI K2.6 × Qwen 3.6 の衝撃</div>
+  </footer>
+
+</div>
+
+<nav class="bottom-nav">
+  <a class="bottom-nav-item" href="index.html" data-page="index.html">
+    <i class="fa-solid fa-house"></i><span>ホーム</span>
+  </a>
+  <a class="bottom-nav-item" href="part1.html" data-page="part1.html">
+    <i class="fa-solid fa-newspaper"></i><span>本文</span>
+  </a>
+  <a class="bottom-nav-item" href="predictions.html" data-page="predictions.html">
+    <i class="fa-solid fa-crystal-ball"></i><span>予測</span>
+  </a>
+  <a class="bottom-nav-item" href="data.html" data-page="data.html">
+    <i class="fa-solid fa-chart-column"></i><span>数字</span>
+  </a>
+  <a class="bottom-nav-item" href="timeline.html" data-page="timeline.html">
+    <i class="fa-regular fa-clock"></i><span>年表</span>
+  </a>
+</nav>
+
+<script src="js/main.js"></script>
+</body>
+</html>

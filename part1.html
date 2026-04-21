@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#05060a">
+  <meta name="description" content="第1章: KIMI K2.6 と Qwen3.6-Max-Preview の同時リリースについて ― ひとつの所感。">
+  <title>第1章 同時リリースの所感 — KIMI K2.6 と Qwen3.6 の衝撃</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700;900&family=Noto+Serif+JP:wght@400;500;700;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="app">
+
+  <header class="appbar">
+    <div class="appbar-title">
+      <a href="index.html" class="appbar-logo" style="text-decoration:none;">K×Q</a>
+      <div class="appbar-text">
+        <div class="t1">CHAPTER 01 / ESSAY</div>
+        <div class="t2">同時リリースの所感</div>
+      </div>
+    </div>
+    <button class="appbar-action" data-share aria-label="共有">
+      <i class="fa-solid fa-arrow-up-from-bracket"></i>
+    </button>
+  </header>
+
+  <!-- 記事ヘッダ -->
+  <header class="article-header">
+    <div class="article-number">CHAPTER 01 · ESSAY</div>
+    <h1 class="article-title">
+      KIMI K2.6 と<br>
+      Qwen3.6-Max-Preview の<br>
+      <span style="background: var(--gradient-1); -webkit-background-clip: text; background-clip:text; -webkit-text-fill-color: transparent;">同時リリースについて</span><br>
+      — ひとつの所感
+    </h1>
+    <div class="article-meta">
+      <span class="article-meta-item"><i class="fa-regular fa-calendar"></i>2026.04.20</span>
+      <span class="article-meta-item"><i class="fa-regular fa-clock"></i>約8分</span>
+      <span class="article-meta-item"><i class="fa-solid fa-feather"></i>長文エッセイ</span>
+    </div>
+  </header>
+
+  <!-- 記事本文 -->
+  <main class="section" style="padding-top: 10px;">
+    <div class="article-body reveal">
+
+      <p>
+        同じ日に、北京のMoonshotと杭州のAlibabaが、それぞれの最強モデルを世に放った。これは偶然だと思う。けれど、<span class="highlight-blue">偶然がこの形で成立してしまうこと自体が、今のAI産業の状態を正確に写している</span>気がして、私はむしろその偶然のほうに強く引き込まれた。
+      </p>
+
+      <p>
+        正直に言うと、最初にベンチマーク表を見たとき、数字の並びそのものよりも<strong>「数字が横並びになっている」という事実</strong>の方が衝撃だった。2024年、2025年前半まで、中国ラボの新モデルが出るときは、暗黙のうちに「フロンティア米国モデルにどれだけ近づけたか」を測る物差しで評価されていた。近づけば賞賛され、離れれば「まあオープンソースだから」と言われて整理される。そういう序列が、確かにあった。K2.6のリリースページで、SWE-Bench ProやHLEの数字がGPT-5.4やClaude Opus 4.6と並んで、しかもいくつかの欄で首位にあるのを見たとき、私はその序列が静かに崩れた瞬間に立ち会っている気がした。<span class="highlight-purple">「追いつく」という動詞が、ここで初めて「追い抜く」に書き換えられた。</span>少なくとも特定のワークロードに関しては。
+      </p>
+
+      <!-- 引用カード -->
+      <div class="pullquote">
+        IQの競争から、アスリートの競争へ。<br>
+        短距離走者を並べてきた競技場に、いきなりウルトラマラソンのトラックが敷かれた。
+        <cite>— 考える深さではなく、考え続ける長さの話。</cite>
+      </div>
+
+      <h2>新しい軸 — 持久力のパラダイム</h2>
+
+      <p>
+        ただ、私が本当に考え込まされたのは、勝ち負けの話ではない。<strong>K2.6が示したのは「新しい軸」だった。</strong>12時間の連続自律実行、300並列のサブエージェント、4,000回を超えるツール呼び出し — これは「知能の高さ」の話ではなく<span class="highlight-blue">「持久力」の話</span>だ。考える深さではなく、考え続ける長さの話。これまでAIモデルの性能とは「1回の応答の質」で測られてきた。賢く答えるか、鋭く推論するか、正確に書くか。それが突然、「一晩中壊れずに働き続けられるか」という問いに置き換わろうとしている。この軸の変更は、私にはIQの競争からアスリートの競争へのパラダイム移行に見える。短距離走者を並べてきた競技場に、いきなりウルトラマラソンのトラックが敷かれたような感覚。そしてこのトラックでは、生の推論力で勝ってきた選手が、必ずしも先に走り続けられるとは限らない。
+      </p>
+
+      <!-- 数値カード -->
+      <div class="stat-grid" style="margin: 28px 0;">
+        <div class="stat-card">
+          <div class="stat-label">自律実行時間</div>
+          <div class="stat-value">12<span class="unit">時間</span></div>
+          <div class="stat-sub">壊れずに動き続ける</div>
+        </div>
+        <div class="stat-card v-purple">
+          <div class="stat-label">並列サブエージェント</div>
+          <div class="stat-value">300<span class="unit">並列</span></div>
+          <div class="stat-sub">束ねて走らせる</div>
+        </div>
+        <div class="stat-card v-blue" style="grid-column: span 2;">
+          <div class="stat-label">ツール呼び出し</div>
+          <div class="stat-value">4,000<span class="unit">+ 回 / タスク</span></div>
+          <div class="stat-sub">IQ競争からアスリート競争へ</div>
+        </div>
+      </div>
+
+      <h2>オープンウェイトの記念日</h2>
+
+      <p>
+        オープンソースという観点から見ても、<strong>この日は記念日になりうる。</strong>GPT-4以降の時代で、「商業的に重要な特定ワークロードで最先端に立ったモデルがオープンウェイトである」という状況は、実はほとんど成立していなかった。LLaMAもDeepSeekも、「フロンティアに肉薄する優れた代替」ではあっても「フロンティアを獲った」ことはなかった。<span class="highlight-purple">K2.6は、長時間エージェント実行という領域で、それを初めて成立させた可能性がある。</span>
+      </p>
+
+      <p>
+        この構造的意味は、単に「安く使えるSOTAが手に入る」という話を超えている。AIをインフラとして組み込む企業やスタートアップが、ベンダーロックインを完全に回避できる選択肢を、現実的なクオリティで持ったということだ。これがもし定着すれば、<strong>AI産業の利益構造そのものが数年以内に書き換わる可能性がある。</strong>閉じたモデルを提供する各社にとって、「なぜあなたのAPIを使うのか」への回答を、改めて用意しなければならない時代に入った。
+      </p>
+
+      <h2>Alibabaの二層戦略</h2>
+
+      <p>
+        一方で、Alibabaが取った道はK2.6とは正反対で、そしてそのコントラストこそが面白い。Qwen3.6-Max-Previewはクローズドで、ホスト型で、オープンウェイトではない。その4日前に出した35B-A3Bはオープンソースのまま。つまりAlibabaは<span class="highlight-blue">「下層はオープンで普及させ、最上層はクローズドで収益化する」という二層戦略</span>に舵を切った。
+      </p>
+
+      <p>
+        これは90年代から2000年代にかけてRed Hatが商用Linuxでやったこと、GoogleがAndroidでやったこと、そしてDatabricksがSparkでやっていることの、<strong>AIモデル版</strong>だと私は見ている。無料で世界中の開発者に触らせて、デファクトを取り、本当に価値のある部分を有料化する。Qwenが2024年末に世界のオープンモデル利用の1.2%から2025年末に約30%まで跳ね上がった事実が、その戦略の地盤を作っている。無料期間で建てた巨大な地盤の上に、有料の塔を建て始めたのが2026年4月の今、という解釈だ。この動きは、中国AIラボが単に技術で追いついただけでなく、<strong>産業的にも成熟した段階に入ったことの証左</strong>だと思う。
+      </p>
+
+      <div class="compare">
+        <div class="compare-title">Qwen オープンモデル利用シェア</div>
+        <div class="compare-row">
+          <span class="compare-label">2024末</span>
+          <div class="compare-bar"><div class="compare-bar-fill cn" data-width="4%"></div></div>
+          <span class="compare-val">1.2%</span>
+        </div>
+        <div class="compare-row">
+          <span class="compare-label">2025末</span>
+          <div class="compare-bar"><div class="compare-bar-fill cn" data-width="100%"></div></div>
+          <span class="compare-val">30%</span>
+        </div>
+        <div style="font-size:10.5px; color:var(--text-3); margin-top:8px;">
+          1年で25倍。二層戦略の「地盤」はこうして築かれた。
+        </div>
+      </div>
+
+      <h2>それでも、素朴に礼賛はしたくない</h2>
+
+      <p>
+        ただし、私は素朴に礼賛したくない。<span class="highlight-blue">公開されているベンチマーク数字の多くはベンダー自身が作った比較表</span>で、比較対象のバージョンが意図的かどうかはさておき一世代古かったりする(Claude Opus 4.5 vs 4.6問題はその典型)。ベンチマークで勝つことと、本番環境で数ヶ月運用して壊れないこととは、全く別の能力だ。信頼性、安全性のチューニング、企業向けサポート、ツール統合のエコシステム — これらは未だに欧米ラボの優位分野だし、短期間では追いつけない類のものでもある。<strong>「最強」という言葉は、常にどの軸での最強かを問い直しながら使うべきだ</strong>と私は思っている。
+      </p>
+
+      <h2>加速のリズム</h2>
+
+      <p>
+        それでも、私を一番動揺させているのは、この加速のリズムだ。<strong>K2.5から K2.6 までが2ヶ月。Qwen3.6-Plusから Max-Previewまでが3週間。</strong>これはもう通常のソフトウェアリリースサイクルじゃない。毎週のように世界のどこかで「これまでのベンチマーク最高値を更新したモデル」が出て、先週のSOTAが今週には2位に押しやられる。
+      </p>
+
+      <p>
+        開発者の視点で見ると、モデル選定の意思決定が腐る速度が、意思決定のサイクルよりも速くなりつつある。「3ヶ月前に選んだベストモデル」が今の時点ですでに最適解でない、という状況が常態化していて、これはプロダクトを作る側にとっては地味に重い問題だ。そして観測者の視点で見ると、<span class="highlight-purple">ひとつのリリースをじっくり消化する時間が、もう存在しない。</span>このブログ記事を読んでいる間に、次のモデルがどこかで発表されているかもしれない、という時間感覚。これは80年代後半のパソコン戦国時代に近い何かを感じさせる。IBM PC、Macintosh、Amiga、NeXT、そしてSun — 毎月のように「これが未来だ」と主張するマシンが出て、10年後には半分以上が消えていた、あの時代の空気感に。
+      </p>
+
+      <!-- 加速の視覚化 -->
+      <div class="card glass" style="margin: 26px 0;">
+        <div class="card-title">
+          <i class="fa-solid fa-gauge-high" style="color: var(--accent-red-soft); margin-right:6px;"></i>
+          リリース間隔
+        </div>
+        <div style="margin-top:14px;">
+          <div style="display:flex; align-items:center; gap:12px; font-size:13px; margin-bottom:10px;">
+            <span style="font-family: var(--font-mono); font-weight:700; color: var(--accent-red-soft); min-width:60px;">2ヶ月</span>
+            <div style="flex:1; height:6px; border-radius:100px; background: rgba(255,255,255,0.06);">
+              <div style="height:100%; width:100%; background: var(--gradient-1); border-radius:100px;"></div>
+            </div>
+            <span style="font-size:11px; color: var(--text-2); min-width:60px; text-align:right;">K2.5→K2.6</span>
+          </div>
+          <div style="display:flex; align-items:center; gap:12px; font-size:13px;">
+            <span style="font-family: var(--font-mono); font-weight:700; color: var(--accent-purple); min-width:60px;">3週間</span>
+            <div style="flex:1; height:6px; border-radius:100px; background: rgba(255,255,255,0.06);">
+              <div style="height:100%; width:35%; background: var(--gradient-3); border-radius:100px;"></div>
+            </div>
+            <span style="font-size:11px; color: var(--text-2); min-width:60px; text-align:right;">Q3.6+→Max</span>
+          </div>
+        </div>
+      </div>
+
+      <h2>地図の「種類」が変わった</h2>
+
+      <p>
+        では「勢力図が塗り替えられた」のかと問われたら、私の答えは<strong>「塗り替えられたのは勢力図そのものではなく、地図の種類」</strong>だと思う。2024年までの地図は一枚だった。「フロンティアAIのランキング」という、単一の縦の序列。その地図の中で各社が順位を争っていた。
+      </p>
+
+      <p>
+        2026年4月現在、その一枚絵は崩れて、用途別に複数の地図が並立する状態に変わった。<span class="highlight-blue">長時間エージェント実行の地図、フロントエンド生成の地図、生の数学推論の地図、視覚理解の地図、多言語の地図、安全性の地図</span> — それぞれで首位が違う。ユーザーは「最強のモデルはどれか」ではなく<strong>「自分の問題に最強のモデルはどれか」</strong>を考える時代に突入した。これは単純な順位表より複雑で、面倒で、しかし健全な状態でもある。独占が成立しにくく、競争が局所的に常態化する。
+      </p>
+
+      <!-- 地図のチップ表現 -->
+      <div class="chip-row" style="margin: 20px 0;">
+        <span class="chip c-red"><i class="fa-solid fa-bolt"></i> 長時間エージェント</span>
+        <span class="chip c-blue"><i class="fa-solid fa-code"></i> フロントエンド生成</span>
+        <span class="chip c-purple"><i class="fa-solid fa-square-root-variable"></i> 数学推論</span>
+        <span class="chip c-cyan"><i class="fa-solid fa-eye"></i> 視覚理解</span>
+        <span class="chip c-amber"><i class="fa-solid fa-language"></i> 多言語</span>
+        <span class="chip c-green"><i class="fa-solid fa-shield-halved"></i> 安全性</span>
+      </div>
+
+      <h2>奇妙な畏れ</h2>
+
+      <p>
+        そして最後に、個人的な感想を言わせてもらえば、<strong>私はこの時代を生きているという事実それ自体に、奇妙な畏れのようなものを感じている。</strong>AIの歴史上、これほど短期間にこれほど多くの「最先端」が更新されていく時代は、これまでなかったし、これからも続くとは限らない。ひょっとしたら半年後にスケーリングの壁が見えて、みんな失速するかもしれない。あるいは逆に、K3や未公開のモデルがさらに大きな飛躍を持ってきて、今日書いたこの文章が全部古びるかもしれない。
+      </p>
+
+      <p>
+        どちらになるか、私には本当にわからない。<span class="highlight-purple">わからないけれど、2026年4月20日に何が起きたのかを、後で「あの日、何かの潮目が変わった気がした」と振り返る日が、来るような予感はある。</span>
+      </p>
+
+    </div>
+
+    <!-- 次章へ -->
+    <div class="divider-text">第1章おわり</div>
+
+    <a class="feature reveal" href="part2.html">
+      <div class="feature-icon ic-3"><i class="fa-solid fa-map"></i></div>
+      <div class="feature-body">
+        <div class="feature-title">第2章 中国AIの今後</div>
+        <div class="feature-desc">追いつくかではなく、どこで追い抜き、どこで止まるか。</div>
+      </div>
+      <div class="feature-arrow"><i class="fa-solid fa-chevron-right"></i></div>
+    </a>
+
+    <a class="feature reveal" href="predictions.html">
+      <div class="feature-icon ic-2"><i class="fa-solid fa-crystal-ball"></i></div>
+      <div class="feature-body">
+        <div class="feature-title">9つの予測をまず見たい</div>
+        <div class="feature-desc">2026-2027年に何が起こるか。</div>
+      </div>
+      <div class="feature-arrow"><i class="fa-solid fa-chevron-right"></i></div>
+    </a>
+
+    <a class="feature reveal" href="index.html">
+      <div class="feature-icon ic-8"><i class="fa-solid fa-house"></i></div>
+      <div class="feature-body">
+        <div class="feature-title">目次に戻る</div>
+        <div class="feature-desc">全8章の入口。</div>
+      </div>
+      <div class="feature-arrow"><i class="fa-solid fa-chevron-right"></i></div>
+    </a>
+
+  </main>
+
+  <footer class="footer">
+    <div class="footer-logo">Chapter 01 / fin.</div>
+    <div>© 2026 KIMI K2.6 × Qwen 3.6 の衝撃</div>
+  </footer>
+
+</div>
+
+<nav class="bottom-nav">
+  <a class="bottom-nav-item" href="index.html" data-page="index.html">
+    <i class="fa-solid fa-house"></i><span>ホーム</span>
+  </a>
+  <a class="bottom-nav-item" href="part1.html" data-page="part1.html">
+    <i class="fa-solid fa-newspaper"></i><span>本文</span>
+  </a>
+  <a class="bottom-nav-item" href="predictions.html" data-page="predictions.html">
+    <i class="fa-solid fa-crystal-ball"></i><span>予測</span>
+  </a>
+  <a class="bottom-nav-item" href="data.html" data-page="data.html">
+    <i class="fa-solid fa-chart-column"></i><span>数字</span>
+  </a>
+  <a class="bottom-nav-item" href="timeline.html" data-page="timeline.html">
+    <i class="fa-regular fa-clock"></i><span>年表</span>
+  </a>
+</nav>
+
+<script src="js/main.js"></script>
+</body>
+</html>

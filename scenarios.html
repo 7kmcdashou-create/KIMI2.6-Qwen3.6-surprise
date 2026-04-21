@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#05060a">
+  <meta name="description" content="2027年末、観測される未来は3つのシナリオに収斂する。ブレイクスルー、並走停滞、分断加速。">
+  <title>3つの未来シナリオ — KIMI K2.6 と Qwen3.6 の衝撃</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700;900&family=Noto+Serif+JP:wght@400;500;700;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="app">
+
+  <header class="appbar">
+    <div class="appbar-title">
+      <a href="index.html" class="appbar-logo" style="text-decoration:none;">K×Q</a>
+      <div class="appbar-text">
+        <div class="t1">FUTURES · 2027</div>
+        <div class="t2">3つの未来シナリオ</div>
+      </div>
+    </div>
+    <button class="appbar-action" data-share aria-label="共有">
+      <i class="fa-solid fa-arrow-up-from-bracket"></i>
+    </button>
+  </header>
+
+  <header class="article-header">
+    <div class="article-number">SCENARIO ANALYSIS · 2027</div>
+    <h1 class="article-title">
+      2027年末、<br>
+      私たちは<br>
+      <span style="background: var(--gradient-3); -webkit-background-clip: text; background-clip:text; -webkit-text-fill-color: transparent;">どの未来</span>にいる?
+    </h1>
+    <div class="article-meta">
+      <span class="article-meta-item"><i class="fa-solid fa-code-branch"></i>3つの分岐</span>
+      <span class="article-meta-item"><i class="fa-solid fa-percent"></i>確率推定つき</span>
+    </div>
+  </header>
+
+  <section class="section" style="padding-top: 10px;">
+    <div class="card glass reveal" style="margin-bottom: 22px;">
+      <p style="font-family: var(--font-serif); font-size: 15px; line-height: 1.9; color: var(--text-1); margin: 0;">
+        9つの予測が全部バラバラに起きるわけではない。相互作用した結果、2027年末時点で観測される未来は大きく<strong>3つのシナリオ</strong>に収斂すると私は見ている。確率は主観推定。
+      </p>
+    </div>
+
+    <!-- シナリオ A -->
+    <article class="scn-card scn-a reveal">
+      <div class="scn-head">
+        <div>
+          <div class="scn-label">SCENARIO A</div>
+          <div class="scn-title">ブレイクスルー</div>
+        </div>
+        <div class="scn-prob">
+          <div class="scn-prob-val">20-25<span style="font-size:14px;">%</span></div>
+          <div class="scn-prob-lbl">実現確率</div>
+        </div>
+      </div>
+      <div class="prob-bar">
+        <div class="prob-bar-fill" data-width="22.5%"></div>
+      </div>
+      <p class="scn-desc">
+        Anthropic / OpenAI が公言通り <strong style="color: var(--text-0);">2027年前半に "powerful AI" を実現</strong>。AI研究の自動化が起き、モデル能力が急激に加速する。中国は追いつけず、2027年末時点でAI性能差が再び開く。ただし具現化AIと実運用エージェントでは中国が並走。
+        <br><br>
+        <span style="color: var(--text-0); font-weight:700;">帰結:</span> 米中は<strong style="color: var(--accent-red-soft);">「フロンティアは米国、実装は中国」</strong>という分業に固定化する。
+      </p>
+
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 18px;">
+        <div style="padding: 10px 12px; background: rgba(255,255,255,0.04); border-radius: 10px; font-size: 11.5px;">
+          <div style="color: var(--text-2); margin-bottom:3px;">フロンティア</div>
+          <div style="font-weight:700; color: var(--accent-red-soft);">🇺🇸 米国優位</div>
+        </div>
+        <div style="padding: 10px 12px; background: rgba(255,255,255,0.04); border-radius: 10px; font-size: 11.5px;">
+          <div style="color: var(--text-2); margin-bottom:3px;">実装</div>
+          <div style="font-weight:700; color: var(--accent-red-soft);">🇨🇳 中国並走</div>
+        </div>
+      </div>
+    </article>
+
+    <!-- シナリオ B -->
+    <article class="scn-card scn-b reveal">
+      <div class="scn-head">
+        <div>
+          <div class="scn-label">SCENARIO B</div>
+          <div class="scn-title">並走停滞</div>
+        </div>
+        <div class="scn-prob">
+          <div class="scn-prob-val">45-55<span style="font-size:14px;">%</span></div>
+          <div class="scn-prob-lbl">実現確率</div>
+        </div>
+      </div>
+      <div class="prob-bar">
+        <div class="prob-bar-fill" data-width="50%"></div>
+      </div>
+      <p class="scn-desc">
+        米国AIラボは<strong style="color: var(--text-0);">スケーリング則の減衰に直面</strong>し、目標未達。中国はAscend世代をスムーズに消化し <strong style="color: var(--text-0);">DeepSeek V4 と K3 で米国と並走</strong>。モデル性能の差は2027年末時点でも3%前後。
+        <br><br>
+        ただしトップラインのモデル性能より、<span style="background: linear-gradient(180deg, transparent 64%, rgba(91,140,255,0.3) 64%); color: var(--text-0); padding:0 2px;">垂直統合スタックの効率と Global South での配布</span>で、中国が実質的に産業優位に立ち始める。
+        <br><br>
+        電力制約が米国に本格的に効いて、ハイパースケーラーが海外進出を加速。
+        <br><br>
+        <span style="color: var(--text-0); font-weight:700;">帰結:</span> <strong style="color: var(--accent-blue);">性能は並ぶが、産業上は中国が実質優位に。</strong>
+      </p>
+
+      <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 6px; margin-top: 18px;">
+        <div style="padding: 10px; background: rgba(255,255,255,0.04); border-radius: 10px; font-size: 11px; text-align:center;">
+          <div style="color: var(--text-2);">性能差</div>
+          <div style="font-weight:700; color: var(--text-0); font-family: var(--font-mono); margin-top:3px;">~3%</div>
+        </div>
+        <div style="padding: 10px; background: rgba(255,255,255,0.04); border-radius: 10px; font-size: 11px; text-align:center;">
+          <div style="color: var(--text-2);">産業優位</div>
+          <div style="font-weight:700; color: var(--accent-blue); margin-top:3px;">🇨🇳</div>
+        </div>
+        <div style="padding: 10px; background: rgba(255,255,255,0.04); border-radius: 10px; font-size: 11px; text-align:center;">
+          <div style="color: var(--text-2);">電力</div>
+          <div style="font-weight:700; color: var(--accent-amber); margin-top:3px;">🇺🇸制約</div>
+        </div>
+      </div>
+    </article>
+
+    <!-- シナリオ C -->
+    <article class="scn-card scn-c reveal">
+      <div class="scn-head">
+        <div>
+          <div class="scn-label">SCENARIO C</div>
+          <div class="scn-title">分断加速</div>
+        </div>
+        <div class="scn-prob">
+          <div class="scn-prob-val">25-30<span style="font-size:14px;">%</span></div>
+          <div class="scn-prob-lbl">実現確率</div>
+        </div>
+      </div>
+      <div class="prob-bar">
+        <div class="prob-bar-fill" data-width="27.5%"></div>
+      </div>
+      <p class="scn-desc">
+        地政学的緊張が激化し、<strong style="color: var(--text-0);">台湾有事ないし類似事態が発生</strong>。チップサプライチェーンが物理的に分断。米中AI業界は技術的にも商業的にも完全に二系統化。日本・韓国・欧州は選択を強いられる。
+        <br><br>
+        具現化AIは軍事技術化し、ロボット戦闘の懸念が表面化。AIの進歩は<span style="background: linear-gradient(180deg, transparent 64%, rgba(255,182,72,0.35) 64%); color: var(--text-0); padding:0 2px;">地政学に従属する形で減速、ないし歪む。</span>
+        <br><br>
+        <span style="color: var(--text-0); font-weight:700;">帰結:</span> <strong style="color: var(--accent-amber);">技術の進歩が、地政学の従属変数になる。</strong>
+      </p>
+
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 18px;">
+        <div style="padding: 10px 12px; background: rgba(255,255,255,0.04); border-radius: 10px; font-size: 11.5px;">
+          <div style="color: var(--text-2); margin-bottom:3px;">サプライチェーン</div>
+          <div style="font-weight:700; color: var(--accent-amber);">⚠️ 完全分断</div>
+        </div>
+        <div style="padding: 10px 12px; background: rgba(255,255,255,0.04); border-radius: 10px; font-size: 11.5px;">
+          <div style="color: var(--text-2); margin-bottom:3px;">第三国</div>
+          <div style="font-weight:700; color: var(--accent-amber);">🇯🇵🇰🇷🇪🇺 選択強要</div>
+        </div>
+      </div>
+    </article>
+
+    <!-- シナリオ比較チャート -->
+    <div class="chart-wrap reveal">
+      <div class="chart-wrap-title">3シナリオの確率分布</div>
+      <div class="chart-wrap-sub">主観推定 / 中央値ベース</div>
+      <div class="chart-holder" style="height: 260px;">
+        <canvas id="scnChart"></canvas>
+      </div>
+    </div>
+
+    <!-- 結び -->
+    <div class="card glass reveal" style="padding: 26px 22px; margin-top: 22px;">
+      <div style="font-family: var(--font-serif); font-size: 12px; color: var(--text-2); letter-spacing: 0.2em; margin-bottom:8px;">CLOSING</div>
+      <h3 style="font-family: var(--font-serif); font-size: 22px; line-height:1.5; margin-bottom:14px;">
+        どれになるか、<br>私には本当にわからない。
+      </h3>
+      <p style="font-size:14px; color: var(--text-1); line-height:1.9; margin:0;">
+        ただ、「AIの未来は<strong>技術だけで決まらず</strong>、電力・地政学・人口動態・労働市場と絡み合って進む」という認識は、2026年4月時点で固めておくべき基本前提だと思う。
+      </p>
+      <p style="font-size:14px; color: var(--text-1); line-height:1.9; margin:14px 0 0;">
+        2027年の年末、振り返って「2026年のあのとき、何を見逃していたか」を読者が思い出せるように、9つの予測と3つのシナリオを<strong>記録として置いておきたい。</strong>
+      </p>
+      <div class="pullquote" style="margin-top: 22px; background: rgba(255,59,74,0.05); border-left-color: var(--accent-red);">
+        あと18ヶ月。<br>その間に、私たちが何を見るかで、<br>たぶん数十年分の未来が決まる。
+      </div>
+    </div>
+
+    <!-- ナビ -->
+    <a class="feature reveal" href="predictions.html" style="margin-top: 20px;">
+      <div class="feature-icon ic-2"><i class="fa-solid fa-arrow-left"></i></div>
+      <div class="feature-body">
+        <div class="feature-title">9つの予測に戻る</div>
+        <div class="feature-desc">シナリオの根拠はここにある。</div>
+      </div>
+    </a>
+
+    <a class="feature reveal" href="data.html">
+      <div class="feature-icon ic-5"><i class="fa-solid fa-chart-column"></i></div>
+      <div class="feature-body">
+        <div class="feature-title">数字で見るAI 2026</div>
+        <div class="feature-desc">投資、電力、人材の流れを可視化。</div>
+      </div>
+      <div class="feature-arrow"><i class="fa-solid fa-chevron-right"></i></div>
+    </a>
+
+  </section>
+
+  <footer class="footer">
+    <div class="footer-logo">3 Scenarios</div>
+    <div>© 2026 KIMI K2.6 × Qwen 3.6 の衝撃</div>
+  </footer>
+
+</div>
+
+<nav class="bottom-nav">
+  <a class="bottom-nav-item" href="index.html" data-page="index.html">
+    <i class="fa-solid fa-house"></i><span>ホーム</span>
+  </a>
+  <a class="bottom-nav-item" href="part1.html" data-page="part1.html">
+    <i class="fa-solid fa-newspaper"></i><span>本文</span>
+  </a>
+  <a class="bottom-nav-item" href="predictions.html" data-page="predictions.html">
+    <i class="fa-solid fa-crystal-ball"></i><span>予測</span>
+  </a>
+  <a class="bottom-nav-item" href="data.html" data-page="data.html">
+    <i class="fa-solid fa-chart-column"></i><span>数字</span>
+  </a>
+  <a class="bottom-nav-item" href="timeline.html" data-page="timeline.html">
+    <i class="fa-regular fa-clock"></i><span>年表</span>
+  </a>
+</nav>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+<script src="js/main.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const ctx = document.getElementById("scnChart");
+    if (!ctx || typeof Chart === "undefined") return;
+    new Chart(ctx, {
+      type: "bar",
+      data: {
+        labels: ["A: ブレイクスルー", "B: 並走停滞", "C: 分断加速"],
+        datasets: [{
+          label: "実現確率 (中央値 %)",
+          data: [22.5, 50, 27.5],
+          backgroundColor: [
+            "rgba(255, 59, 74, 0.7)",
+            "rgba(91, 140, 255, 0.75)",
+            "rgba(255, 182, 72, 0.7)"
+          ],
+          borderColor: [
+            "rgba(255, 59, 74, 1)",
+            "rgba(91, 140, 255, 1)",
+            "rgba(255, 182, 72, 1)"
+          ],
+          borderWidth: 1,
+          borderRadius: 10,
+          barThickness: 36,
+        }]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: { display: false },
+          tooltip: {
+            backgroundColor: "rgba(11, 13, 20, 0.95)",
+            borderColor: "rgba(255,255,255,0.14)",
+            borderWidth: 1,
+            padding: 12,
+            titleColor: "#f5f6fa",
+            bodyColor: "#c9ccd6",
+            callbacks: { label: (c) => ` ${c.parsed.y}%` }
+          }
+        },
+        scales: {
+          y: {
+            beginAtZero: true,
+            max: 60,
+            ticks: { color: "#8a8fa0", font: { size: 11 }, callback: (v) => v + "%" },
+            grid: { color: "rgba(255,255,255,0.05)" }
+          },
+          x: {
+            ticks: { color: "#c9ccd6", font: { size: 11 } },
+            grid: { display: false }
+          }
+        }
+      }
+    });
+  });
+</script>
+</body>
+</html>
